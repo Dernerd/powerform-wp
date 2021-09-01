@@ -1,0 +1,23 @@
+<?php if ( powerform_array_value_exists( $properties, 'poll-border' ) ) { ?> .powerform-poll-
+
+<?php echo $properties['form_id'] ?> {
+<?php if ( powerform_array_value_exists( $properties, 'powerform-poll-border-width' ) ) { ?> border-width:
+<?php echo $properties['powerform-poll-border-width'] ?>px;
+<?php } else { ?> border-width: 0;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'powerform-poll-border-style' ) ) { ?> border-style:
+<?php echo $properties['powerform-poll-border-style'] ?>;
+<?php } else { ?> border-style: none;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'powerform-poll-border-radius' ) ) { ?> border-radius:
+<?php echo $properties['powerform-poll-border-radius'] ?>px; -moz-border-radius:
+<?php echo $properties['powerform-poll-border-radius'] ?>px; -webkit-border-radius:
+<?php echo $properties['powerform-poll-border-radius'] ?>px;
+<?php } else { ?> border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0;
+<?php } ?> }
+
+<?php } else { ?> .powerform-poll-
+
+<?php echo $properties['form_id'] ?> { border-width: 0; border-style: none; border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0; }
+
+<?php } ?>

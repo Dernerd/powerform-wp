@@ -1,0 +1,53 @@
+<?php if ( powerform_array_value_exists( $properties, 'cform-color-settings' ) ) { ?> .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-multiselect .powerform-option {
+<?php if ( powerform_array_value_exists( $properties, 'multiselect-border' ) && !empty( $properties['multiselect-border'] ) ) { ?> border-color:
+<?php echo $properties['multiselect-border'] ?>;
+<?php } else { ?> border-color: #777771;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'multiselect-item-color-static' ) && !empty( $properties['multiselect-item-color-static'] ) ) { ?> color:
+<?php echo $properties['multiselect-item-color-static'] ?>;
+<?php } else { ?> color: #777771;
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-multiselect .powerform-option:hover {
+<?php if ( powerform_array_value_exists( $properties, 'multiselect-border-hover' ) && !empty( $properties['multiselect-border-hover'] ) ) { ?> border-color:
+<?php echo $properties['multiselect-border-hover'] ?>;
+<?php } else { ?> border-color: #000000;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'multiselect-item-color-hover' ) && !empty( $properties['multiselect-item-color-hover'] ) ) { ?> color:
+<?php echo $properties['multiselect-item-color-hover'] ?>;
+<?php } else { ?> color: #000000;
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-multiselect .powerform-option.powerform-is_checked {
+<?php if ( powerform_array_value_exists( $properties, 'multiselect-border-active' ) && !empty( $properties['multiselect-border-active'] ) ) { ?> border-color:
+<?php echo $properties['multiselect-border-active'] ?>;
+<?php } else { ?> border-color: #17A8E3;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'multiselect-item-color-active' ) && !empty( $properties['multiselect-item-color-active'] ) ) { ?> color:
+<?php echo $properties['multiselect-item-color-active'] ?>;
+<?php } else { ?> color: #17A8E3;
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-has_error .powerform-multiselect .powerform-option {
+<?php if ( powerform_array_value_exists( $properties, 'input-border-active' ) && !empty( $properties['input-border-active'] ) ) { ?> border-color:
+<?php echo $properties['input-border-active'] ?>;
+<?php } else { ?> border-color: #E04562;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'input-border-active' ) && !empty( $properties['input-border-active'] ) ) { ?> color:
+<?php echo $properties['input-border-active'] ?>;
+<?php } else { ?> color: #E04562;
+<?php } ?> }
+
+<?php } else { ?> .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-multiselect .powerform-option { border-color: #777771; color: #777771; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-multiselect .powerform-option:hover { border-color: #000000; color: #000000; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-multiselect .powerform-option.powerform-is_checked { border-color: #17A8E3; color: #17A8E3; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-has_error .powerform-multiselect .powerform-option { border-color: #E04562; color: #E04562; }
+
+<?php } ?>

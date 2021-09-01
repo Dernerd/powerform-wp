@@ -1,0 +1,284 @@
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-toggle-typography' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-title-font-size' ) ) { ?>
+<?php if ( $properties['knowledge-title-font-size'] != '24' ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title { font-size: calc(
+<?php echo $properties['knowledge-title-font-size'] ?>px - 6px); } @media (min-width: 783px){ .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title { font-size:
+<?php echo $properties['knowledge-title-font-size'] ?>px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-quiz--title { font-size: calc(
+<?php echo $properties['knowledge-title-font-size'] ?>px - 6px); } }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title { font-size:
+<?php echo $properties['knowledge-title-font-size'] ?>px; }
+<?php } ?>
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title { font-size: 36px; } @media (min-width: 783px){ .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title { font-size: 42px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-quiz--title { font-size: 36px; } }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-title-font-family' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title {
+<?php if ( $properties['knowledge-title-font-family'] != 'custom' && !empty( $properties['knowledge-title-font-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-title-font-family'] ?>;
+<?php } ?>
+<?php if ( $properties['knowledge-title-font-family'] == 'custom' && !empty( $properties['knowledge-title-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-title-custom-family'] ?>;
+<?php } ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title { font-family: Roboto; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-title-font-weight' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title {
+<?php powerform_echo_font_weight( $properties, 'knowledge-title-font-weight' ); ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title { font-weight: 500; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-description-font-size' ) ) { ?>
+<?php if ( $properties['knowledge-description-font-size'] != '16' ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description { font-size: calc(
+<?php echo $properties['knowledge-description-font-size'] ?>px - 4px); } @media (min-width: 783px){ .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description { font-size:
+<?php echo $properties['knowledge-description-font-size'] ?>px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-quiz--description { font-size: calc(
+<?php echo $properties['knowledge-description-font-size'] ?>px - 4px); } }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description { font-size:
+<?php echo $properties['knowledge-description-font-size'] ?>px; }
+<?php } ?>
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description { font-size: 16px; } @media (min-width: 783px){ .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description { font-size: 20px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-quiz--description { font-size: 16px; } }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-description-font-family' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description {
+<?php if ( $properties['knowledge-description-font-family'] != 'custom' && !empty( $properties['knowledge-description-font-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-description-font-family'] ?>;
+<?php } ?>
+<?php if ( $properties['knowledge-description-font-family'] == 'custom' && !empty( $properties['knowledge-description-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-description-custom-family'] ?>;
+<?php } ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description { font-family: Roboto; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-description-font-weight' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description {
+<?php powerform_echo_font_weight( $properties, 'knowledge-description-font-weight' ); ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description { font-weight: 400; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-question-font-size' ) ) { ?>
+<?php if ( $properties['knowledge-question-font-size'] === '24' ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend { font-size: calc(
+<?php echo $properties['knowledge-question-font-size'] ?>px - 4px); } @media (min-width: 783px){ .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend { font-size:
+<?php echo $properties['knowledge-question-font-size'] ?>px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-question legend { font-size: calc(
+<?php echo $properties['knowledge-question-font-size'] ?>px - 4px); } }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend { font-size:
+<?php echo $properties['knowledge-question-font-size'] ?>px; }
+<?php } ?>
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend { font-size: 20px; } @media (min-width: 783px){ .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend { font-size: 24px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-question legend { font-size: 20px; } }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-question-font-family' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend {
+<?php if ( $properties['knowledge-question-font-family'] != 'custom' && !empty( $properties['knowledge-question-font-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-question-font-family'] ?>;
+<?php } ?>
+<?php if ( $properties['knowledge-question-font-family'] == 'custom' && !empty( $properties['knowledge-question-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-question-custom-family'] ?>;
+<?php } ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend { font-family: Roboto; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-question-font-weight' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend {
+<?php powerform_echo_font_weight( $properties, 'knowledge-question-font-weight' ); ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend { font-weight: 500; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-font-size' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--name { font-size:
+<?php echo $properties['knowledge-answer-font-size'] ?>px; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--name { font-size: 14px; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-font-family' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--name {
+<?php if ( $properties['knowledge-answer-font-family'] != 'custom' && !empty( $properties['knowledge-answer-font-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-answer-font-family'] ?>;
+<?php } ?>
+<?php if ( $properties['knowledge-answer-font-family'] == 'custom' && !empty( $properties['knowledge-answer-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-answer-custom-family'] ?>;
+<?php } ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--name { font-family: Roboto; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-font-weight' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--name {
+<?php powerform_echo_font_weight( $properties, 'knowledge-answer-font-weight' ); ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--name { font-weight: 500; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-phrasing-font-size' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question--result span { font-size:
+<?php echo $properties['knowledge-phrasing-font-size'] ?>px; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question--result span { font-size: 16px; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-phrasing-font-family' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question--result span {
+<?php if ( $properties['knowledge-phrasing-font-family'] != 'custom' && !empty( $properties['knowledge-phrasing-font-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-phrasing-font-family'] ?>;
+<?php } ?>
+<?php if ( $properties['knowledge-phrasing-font-family'] == 'custom' && !empty( $properties['knowledge-phrasing-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-phrasing-custom-family'] ?>;
+<?php } ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question--result span { font-family: Roboto; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-phrasing-font-weight' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question--result span {
+<?php powerform_echo_font_weight( $properties, 'knowledge-phrasing-font-weight' ); ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question--result span { font-weight: 700; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-submit-font-size' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button { font-size:
+<?php echo $properties['knowledge-submit-font-size'] ?>px; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button { font-size: 14px; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-submit-font-family' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button {
+<?php if ( $properties['knowledge-submit-font-family'] != 'custom' && !empty( $properties['knowledge-submit-font-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-submit-font-family'] ?>;
+<?php } ?>
+<?php if ( $properties['knowledge-submit-font-family'] == 'custom' && !empty( $properties['knowledge-submit-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-submit-custom-family'] ?>;
+<?php } ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button { font-family: Roboto; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-submit-font-weight' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button {
+<?php powerform_echo_font_weight( $properties, 'knowledge-submit-font-weight' ); ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button { font-weight: 500; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-summary-font-size' ) ) { ?>
+<?php if ( $properties['knowledge-summary-font-size'] != '22' ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p { font-size: calc(
+<?php echo $properties['knowledge-summary-font-size'] ?>px - 6px); } @media (min-width: 783px){ .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p { font-size:
+<?php echo $properties['knowledge-summary-font-size'] ?>px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-quiz--summary p { font-size: calc(
+<?php echo $properties['knowledge-summary-font-size'] ?>px - 6px); } }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p { font-size:
+<?php echo $properties['knowledge-summary-font-size'] ?>px; }
+<?php } ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p small { font-size: calc(
+<?php echo $properties['knowledge-summary-font-size'] ?>px / 2); }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p { font-size: 34px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p small { font-size: 17px; } @media (min-width: 783px){ .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p { font-size: 40px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p small { font-size: 20px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-quiz--summary p { font-size: 34px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-quiz--summary p small { font-size: 17px; } }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-summary-font-family' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary * {
+<?php if ( $properties['knowledge-summary-font-family'] != 'custom' && !empty( $properties['knowledge-summary-font-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-summary-font-family'] ?>;
+<?php } ?>
+<?php if ( $properties['knowledge-summary-font-family'] == 'custom' && !empty( $properties['knowledge-summary-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-summary-custom-family'] ?>;
+<?php } ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary * { font-family: Roboto; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-summary-font-weight' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p {
+<?php powerform_echo_font_weight( $properties, 'knowledge-summary-font-weight' ); ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p { font-weight: 400; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-sshare-font-size' ) ) { ?>
+<?php if ( $properties['knowledge-sshare-font-size'] != '20' ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--text { font-size: calc(
+<?php echo $properties['knowledge-sshare-font-size'] ?>px - 3px); } @media (min-width: 783px){ .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--text { font-size:
+<?php echo $properties['knowledge-sshare-font-size'] ?>px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-social--text { font-size: calc(
+<?php echo $properties['knowledge-sshare-font-size'] ?>px - 3px); } }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--text { font-size:
+<?php echo $properties['knowledge-sshare-font-size'] ?>px; }
+<?php } ?>
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--text { font-size: 20px; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-sshare-font-family' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--text {
+<?php if ( $properties['knowledge-sshare-font-family'] != 'custom' && !empty( $properties['knowledge-sshare-font-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-sshare-font-family'] ?>;
+<?php } ?>
+<?php if ( $properties['knowledge-sshare-font-family'] == 'custom' && !empty( $properties['knowledge-sshare-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-sshare-custom-family'] ?>;
+<?php } ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--text { font-family: Roboto; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-sshare-font-weight' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--text {
+<?php powerform_echo_font_weight( $properties, 'knowledge-sshare-font-weight' ); ?> }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--text { font-weight: 400; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-social-size' ) ) { ?>
+<?php if ( $properties['knowledge-social-size'] != '24' ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon { font-size: calc(
+<?php echo $properties['knowledge-social-size'] ?>px - 6px); } @media (min-width: 783px){ .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon { font-size:
+<?php echo $properties['knowledge-social-size'] ?>px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-social--icon { font-size: calc(
+<?php echo $properties['knowledge-social-size'] ?>px - 6px); } }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon { font-size:
+<?php echo $properties['knowledge-social-size'] ?>px; }
+<?php } ?>
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon { font-size: 33px; } @media (min-width: 783px){ .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon { font-size: 36px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-social--icon { font-size: 33px; } }
+<?php } ?>
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title { font-size: 36px; font-family: Roboto; font-weight: 500; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description { font-size: 16px; font-family: Roboto; font-weight: 400; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend { font-size: 20px; font-family: Roboto; font-weight: 500; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--name { font-size: 14px; font-family: Roboto; font-weight: 500; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question--result span { font-size: 16px; font-family: Roboto; font-weight: 700; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button { font-size: 14px; font-family: Roboto; font-weight: 500; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary * { font-family: Roboto; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p { font-size: 34px; font-weight: 400; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p small { font-size: 17px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--text { font-size: 20px; font-family: Roboto; font-weight: 400; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon { font-size: 33px; } @media (min-width: 783px){ .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title { font-size: 42px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-quiz--title { font-size: 36px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description { font-size: 20px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-quiz--description { font-size: 16px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend { font-size: 24px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-question legend { font-size: 20px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p { font-size: 40px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary p small { font-size: 20px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-quiz--summary p { font-size: 34px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon { font-size: 36px; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material.powerform-size--small .powerform-social--icon { font-size: 33px; } }
+<?php } ?>

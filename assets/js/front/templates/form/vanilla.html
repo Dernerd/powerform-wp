@@ -1,0 +1,5 @@
+<?php include('global/grid.html') ?>
+
+<?php if ( powerform_array_value_exists( $properties, 'use-custom-css' ) && powerform_array_value_exists( $properties, 'custom_css' ) ) { ?>
+	<?php echo $properties['custom_css'] ?>
+<?php } ?>

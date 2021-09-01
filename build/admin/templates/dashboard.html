@@ -1,0 +1,796 @@
+<div>
+
+    <script type="text/template" id="powerform-new-form-content-tpl">
+        <p><small>{{ Powerform.l10n.popup.new_form_desc2 }}</small></p>
+        <div class="sui-notice" id="powerform-template-register-notice" style="display: none;">
+            <p>{{ Powerform.l10n.popup.registration_notice }}</p>
+        </div>
+        <div class="sui-notice" id="powerform-template-login-notice" style="display: none;">
+            <p>{{ Powerform.l10n.popup.login_notice }}</p>
+        </div>
+        <div id="powerform-form-name-input" class="sui-form-field">
+
+            <label for="powerform-form-name" class="sui-screen-reader-text">{{ Powerform.l10n.popup.input_label }}</label>
+            <input type="text" id="powerform-form-name" class="sui-form-control fui-required" placeholder="{{Powerform.l10n.popup.new_form_placeholder}}" autofocus>
+            <span class="sui-error-message" style="display: none;">{{Powerform.l10n.popup.form_name_validation}}</span>
+
+        </div>
+    </script>
+
+    <script type="text/template" id="powerform-new-poll-content-tpl">
+        <p><small>{{ Powerform.l10n.popup.new_poll_desc2 }}</small></p>
+
+        <div id="powerform-form-name-input" class="sui-form-field">
+
+            <label for="powerform-form-name" class="sui-screen-reader-text">{{ Powerform.l10n.popup.input_label }}</label>
+            <input type="text" id="powerform-form-name" class="sui-form-control fui-required" placeholder="{{Powerform.l10n.popup.new_poll_placeholder}}" autofocus>
+            <span class="sui-error-message" style="display: none;">{{Powerform.l10n.popup.poll_name_validation}}</span>
+
+        </div>
+    </script>
+
+    <script type="text/template" id="powerform-new-quiz-content-tpl">
+
+        <p><small>{{ Powerform.l10n.popup.new_quiz_desc2 }}
+			{[ if( Powerform.Data.showDocLink ) { ]}
+			<a href="https://n3rds.work/docs/wpmu-dev-plugins/powerform/?utm_source=powerform&utm_medium=plugin&utm_campaign=capture_leads_learnmore_link#leads" target="_blank">
+				{{ Powerform.l10n.popup.learn_more }}
+			</a>
+			{[ } ]}
+		</small></p>
+
+        <div class="sui-form-field" style="margin-bottom: 0;">
+
+            <label for="powerform-new-quiz-leads" class="sui-toggle fui-highlighted-toggle">
+
+				<input
+					type="checkbox"
+					id="powerform-new-quiz-leads"
+					aria-labelledby="powerform-new-quiz-leads-label"
+				/>
+
+				<span class="sui-toggle-slider" aria-hidden="true"></span>
+
+				<span id="powerform-new-quiz-leads-label" class="sui-toggle-label">{{ Powerform.l10n.quiz.quiz_leads_toggle }}</span>
+
+			</label>
+
+            <div id="sui-quiz-leads-description" class="sui-notice sui-notice-info" style="display: none; margin-top: 30px;">
+                <p>{{ Powerform.l10n.quiz.quiz_leads_desc }}</p>
+            </div>
+
+        </div>
+
+    </script>
+
+    <script type="text/template" id="powerform-new-form-tpl">
+
+        <div class="sui-box-header sui-block-content-center">
+
+            <h3 class="sui-box-title" id="dialogTitle">{{ Powerform.l10n.popup.enter_name }}</h3>
+
+            <button class="sui-dialog-close powerform-cancel-create-form" data-a11y-dialog-hide aria-label="Close this dialog window"></button>
+
+        </div>
+
+        <div class="sui-box-body sui-box-body-slim sui-block-content-center">
+
+        </div>
+
+        <div class="sui-box-footer sui-box-footer-right" style="padding-top: 0;">
+
+            <button id="powerform-build-your-form" class="sui-button sui-button-blue">
+				<span class="sui-loading-text"><i class="sui-icon-plus" aria-hidden="true"></i> {{Powerform.l10n.popup.create}}</span>
+				<i class="sui-icon-loader sui-loading" aria-hidden="true"></i>
+			</button>
+
+        </div>
+
+        {[ if( Powerform.Data.showBranding ) { ]}
+        <img src="{{ Powerform.Data.imagesUrl }}/powerform-create-modal.png" srcset="{{ Powerform.Data.imagesUrl }}/powerform-create-modal.png 1x, {{ Powerform.Data.imagesUrl }}/powerform-create-modal@2x.png 2x" class="sui-image sui-image-center" aria-hidden="true"
+            alt="Powerform"> {[ } ]}
+
+    </script>
+
+    <script type="text/template" id="powerform-new-quiz-tpl">
+
+        <div class="sui-box-header sui-block-content-center">
+
+            <h3 class="sui-box-title" id="dialogTitle">{{ Powerform.l10n.quiz.collect_leads }}</h3>
+
+            <button class="sui-dialog-close powerform-cancel-create-form" data-a11y-dialog-hide aria-label="Close this dialog window"></button>
+
+        </div>
+
+        <div class="sui-box-body sui-box-body-slim sui-block-content-center">
+
+        </div>
+
+        <div class="sui-box-footer sui-box-footer-right" style="padding-top: 0;">
+
+            <button id="powerform-build-your-form" class="sui-button sui-button-blue">
+				<span class="sui-loading-text"><i class="sui-icon-plus" aria-hidden="true"></i> {{ Powerform.l10n.quiz.create_quiz }}</span>
+				<i class="sui-icon-loader sui-loading" aria-hidden="true"></i>
+			</button>
+
+        </div>
+
+        {[ if( Powerform.Data.showBranding ) { ]}
+        <img src="{{ Powerform.Data.imagesUrl }}/powerform-create-modal.png" srcset="{{ Powerform.Data.imagesUrl }}/powerform-create-modal.png 1x, {{ Powerform.Data.imagesUrl }}/powerform-create-modal@2x.png 2x" class="sui-image sui-image-center" aria-hidden="true"
+            alt="Powerform"> {[ } ]}
+
+    </script>
+
+    <script type="text/template" id="powerform-login-popup-tpl">
+
+        <div class="psource-row">
+
+            <div class="psource-col col-12 col-sm-6">
+
+                <a class="psource-popup--logreg" href="{{ loginUrl }}">
+
+                    <div class="psource-logreg--header">
+
+                        <span class="wpdui-icon wpdui-icon-key"></span>
+
+                        <h3 class="psource-logreg--title">{{ Powerform.l10n.login.login_label }}</h3>
+
+                    </div>
+
+                    <div class="psource-logreg--section">
+
+                        <p class="psource-logreg--description">{{ Powerform.l10n.login.login_description }}</p>
+
+                        <div class="psource-logreg--image">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="140" viewBox="0 0 110 140" preserveAspectRatio="none" class="psource-svg-login">
+                                <defs>
+                                    <path id="b" d="M0 40h100v94H0z"/>
+                                    <filter id="a" width="116%" height="117%" x="-8%" y="-7.4%"
+                                            filterUnits="objectBoundingBox">
+                                        <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+                                        <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1"
+                                                        stdDeviation="2.5"/>
+                                        <feColorMatrix in="shadowBlurOuter1"
+                                                       values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                                    </filter>
+                                    <path id="c" d="M10 112h6v6h-6z"/>
+                                    <path id="d" d="M10 90h80v15H10z"/>
+                                    <path id="e" d="M10 60h80v15H10z"/>
+                                </defs>
+                                <g fill="none" fill-rule="evenodd" transform="translate(5)">
+                                    <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+                                    <use fill="#FFF" xlink:href="#b"/>
+                                    <rect width="22" height="12" x="68" y="112" fill="#0472AC" rx="3"/>
+                                    <path fill="#808285" d="M19 114h26v2H19z"/>
+                                    <use fill="#FBFBFB" xlink:href="#c"/>
+                                    <path stroke="#E1E1E1" d="M10.5 112.5h5v5h-5z"/>
+                                    <use fill="#FBFBFB" xlink:href="#d"/>
+                                    <path stroke="#E1E1E1" d="M10.5 90.5h79v14h-79z"/>
+                                    <path fill="#808285" d="M10 85h26v2H10z"/>
+                                    <use fill="#FBFBFB" xlink:href="#e"/>
+                                    <path stroke="#E1E1E1" d="M10.5 60.5h79v14h-79z"/>
+                                    <path fill="#808285" d="M10 55h50v2H10z"/>
+                                    <circle cx="50" cy="15" r="15" fill="#0272AC"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+            <div class="psource-col col-12 col-sm-6">
+
+                <a class="psource-popup--logreg" href="{{ registerUrl }}">
+
+                    <div class="psource-logreg--header">
+
+                        <span class="wpdui-icon wpdui-icon-profile-female"></span>
+
+                        <h3 class="psource-logreg--title">{{ Powerform.l10n.login.registration_label }}</h3>
+
+                    </div>
+
+                    <div class="psource-logreg--section">
+
+                        <p class="psource-logreg--description">{{ Powerform.l10n.login.registration_description }}</p>
+
+                        <div class="psource-logreg--image">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="183" height="97" viewBox="0 0 183 97" preserveAspectRatio="none" class="psource-svg-registration">
+                                <defs>
+                                    <path id="a" d="M0 58h183v15H0z"/>
+                                    <path id="b" d="M0 23h183v15H0z"/>
+                                </defs>
+                                <g fill="none" fill-rule="evenodd">
+                                    <rect width="50" height="14" y="83" fill="#353535" rx="3"/>
+                                    <path fill="#FBFBFB" stroke="#E1E1E1" d="M.5 58.5h182v14H.5z"/>
+                                    <path fill="#808285" d="M0 51h40v2H0z"/>
+                                    <path fill="#FBFBFB" stroke="#E1E1E1" d="M.5 23.5h182v14H.5z"/>
+                                    <path fill="#808285" d="M0 16h40v2H0z"/>
+                                    <path fill="#353535" d="M0 0h120v6H0z"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+    </script>
+
+    <script type="text/template" id="powerform-quizzes-popup-tpl">
+
+        <div class="sui-box-header sui-block-content-center">
+
+            <h3 class="sui-box-title" id="dialogTitle">{{ Powerform.l10n.quiz.choose_quiz_title }}</h3>
+
+            <div class="sui-actions-right">
+
+                <button data-a11y-dialog-hide="" class="sui-dialog-close" aria-label=""></button>
+
+            </div>
+
+        </div>
+
+        <div class="sui-box-body" style="padding-top: 10px; padding-bottom: 5px;">
+
+            <p class="sui-description sui-block-content-center">{{ Powerform.l10n.quiz.choose_quiz_description }}</p>
+
+            <div id="powerform-form-name-input" class="sui-form-field">
+
+                <label for="powerform-form-name" class="sui-label">{{ Powerform.l10n.quiz.quiz_name }}</label>
+
+                <input type="text" id="powerform-form-name" class="sui-form-control" placeholder="{{Powerform.l10n.popup.new_quiz_placeholder}}" autofocus />
+
+                <div id="sui-quiz-name-error" class="sui-notice sui-notice-error powerform-validate-answers" style="display: none;">
+                    <p>{{Powerform.l10n.popup.quiz_name_validation}}</p>
+                </div>
+
+            </div>
+
+            <label class="sui-label">{{ Powerform.l10n.quiz.quiz_type }}</label>
+
+        </div>
+
+        <div class="sui-box-selectors">
+
+            <ul>
+
+                <li><label for="powerform-new-quiz--knowledge" class="sui-box-selector">
+					<input
+						type="radio"
+						name="powerform-new-quiz"
+						id="powerform-new-quiz--knowledge"
+						class="powerform-new-quiz-type"
+						value="knowledge"
+						checked="checked"
+					/>
+					<span>
+						<i class="sui-icon-academy" aria-hidden="true"></i>
+						{{ Powerform.l10n.quiz.knowledge_label }}
+					</span>
+					<span>{{ Powerform.l10n.quiz.knowledge_description }}</span>
+				</label></li>
+
+                <li><label for="powerform-new-quiz--nowrong" class="sui-box-selector">
+					<input
+						type="radio"
+						name="powerform-new-quiz"
+						id="powerform-new-quiz--nowrong"
+						class="powerform-new-quiz-type"
+						value="nowrong"
+					/>
+					<span>
+						<i class="sui-icon-community-people" aria-hidden="true"></i>
+						{{ Powerform.l10n.quiz.nowrong_label }}
+					</span>
+					<span>{{ Powerform.l10n.quiz.nowrong_description }}</span>
+				</label></li>
+
+            </ul>
+
+        </div>
+
+        <div class="sui-box-footer">
+
+            <div class="sui-actions-right">
+
+                <button class="sui-button select-quiz-template">
+					<span class="sui-loading-text">{{ Powerform.l10n.quiz.continue_button }}</span>
+					<i class="sui-icon-load sui-loading" aria-hidden="true"></i>
+				</button>
+
+            </div>
+
+        </div>
+
+        {[ if( Powerform.Data.showBranding ) { ]}
+        <img src="{{ Powerform.Data.imagesUrl }}/powerform-create-modal.png" srcset="{{ Powerform.Data.imagesUrl }}/powerform-create-modal.png 1x, {{ Powerform.Data.imagesUrl }}/powerform-create-modal@2x.png 2x" class="sui-image sui-image-center" aria-hidden="true"
+            alt="Powerform"> {[ } ]}
+
+    </script>
+
+    <script type="text/template" id="powerform-form-popup-tpl">
+
+        <div class="sui-box-header sui-block-content-center">
+
+            <h3 class="sui-box-title" id="dialogTitle">{{ Powerform.l10n.form.form_template_title }}</h3>
+
+            <div class="sui-actions-right">
+
+                <button data-a11y-dialog-hide="" class="sui-dialog-close" aria-label=""></button>
+
+            </div>
+
+        </div>
+
+        <div class="sui-box-body sui-block-content-center" style="padding-top: 10px;">
+
+            <p class="sui-description">{{ Powerform.l10n.form.form_template_description }}</p>
+
+        </div>
+
+        <div class="sui-box-selectors sui-box-selectors-col-2">
+
+            <ul>
+
+                {[ _.each(templates, function(template){ ]} {[ if( template.options.id !== 'leads' ) { ]}
+
+                <li>
+
+                    <label for="powerform-new-quiz--{{ template.options.id }}" class="sui-box-selector">
+
+								<input
+										type="radio"
+										name="powerform-form-template"
+										id="powerform-new-quiz--{{ template.options.id }}"
+										class="powerform-new-form-type"
+										value="{{ template.options.id }}"
+										{[ if( template.options.id === 'blank' ) { ]}
+										checked="checked"
+										{[ } ]}
+								/>
+
+								<span>
+									<i class="sui-icon-{{template.options.icon}}" aria-hidden="true"></i>
+									{{ template.options.name }}
+								</span>
+
+							</label>
+
+                </li>
+
+                {[ } ]} {[ }); ]}
+
+            </ul>
+
+        </div>
+
+        <div class="sui-box-footer">
+
+            <div class="sui-actions-right">
+
+                <button class="sui-button select-quiz-template">
+					<span class="sui-loading-text">{{ Powerform.l10n.quiz.continue_button }}</span>
+					<i class="sui-icon-load sui-loading" aria-hidden="true"></i>
+				</button>
+
+            </div>
+
+        </div>
+
+        {[ if( Powerform.Data.showBranding ) { ]}
+        <img src="{{ Powerform.Data.imagesUrl }}/powerform-create-modal.png" srcset="{{ Powerform.Data.imagesUrl }}/powerform-create-modal.png 1x, {{ Powerform.Data.imagesUrl }}/powerform-create-modal@2x.png 2x" class="sui-image sui-image-center" aria-hidden="true"
+            alt="Powerform"> {[ } ]}
+
+    </script>
+
+    <script type="text/template" id="powerform-exports-schedule-popup-tpl">
+
+        <div class="sui-box-body">
+
+            <div class="sui-box-settings-row">
+
+                <div class="sui-box-settings-col-2">
+
+                    <span class="sui-settings-label sui-dark">{{ Powerform.l10n.popup.manual_exports }}</span>
+                    <span class="sui-description">{{ Powerform.l10n.popup.manual_description }}</span>
+
+                    <form method="post" style="margin-top: 10px;">
+
+                        <input type="hidden" name="powerform_export" value="1" />
+                        <input type="hidden" name="form_id" value="{{ Powerform.l10n.exporter.form_id }}" />
+                        <input type="hidden" name="form_type" value="{{ Powerform.l10n.exporter.form_type }}" />
+                        <input type="hidden" name="_powerform_nonce" value="{{ Powerform.l10n.exporter.export_nonce }}" />
+
+                        <button class="sui-button sui-button-ghost">{{ Powerform.l10n.popup.download_csv }}</button> {[ if( 'cform' === Powerform.l10n.exporter.form_type || 'quiz' === Powerform.l10n.exporter.form_type ) { ]}
+                        <label for="apply-submission-filter" class="sui-checkbox sui-checkbox-sm sui-checkbox-stacked" style="margin-top: 20px;">
+								<input type="checkbox" name="submission-filter" id="apply-submission-filter" value="yes" />
+								<span aria-hidden="true"></span>
+								<span>{{ Powerform.l10n.popup.apply_submission_filter }}</span>
+							</label> {[ } ]}
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <form method="post" class="sui-box-settings-row schedule-action">
+
+                <div class="sui-box-settings-col-2">
+
+                    <span class="sui-settings-label sui-dark">{{ Powerform.l10n.popup.scheduled_exports }}</span>
+                    <span class="sui-description">{{ Powerform.l10n.popup.scheduled_description }}</span>
+
+                    <div class="sui-side-tabs" style="margin-top: 10px;">
+
+                        <div class="sui-tabs-menu tab-labels">
+
+                            <label for="powerform-disable-scheduled-exports" class="sui-tab-item tab-label-disable">
+								<input
+									type="radio"
+									name="enabled"
+									value="false"
+									id="powerform-disable-scheduled-exports"
+								/>
+								{{ Powerform.l10n.popup.disable }}
+							</label>
+
+                            <label for="powerform-enable-scheduled-exports" class="sui-tab-item tab-label-enable">
+								<input
+									type="radio"
+									name="enabled"
+									value="true"
+									id="powerform-enable-scheduled-exports"
+								/>
+								{{ Powerform.l10n.popup.enable }}
+							</label>
+
+                        </div>
+
+                        <div class="sui-tabs-content schedule-enabled">
+
+                            <div id="powerform-export-schedule-timeframe" class="sui-tab-content sui-tab-boxed active">
+
+                                <div class="sui-row">
+
+                                    <div class="sui-col-md-6">
+
+                                        <div class="sui-form-field">
+
+                                            <label class="sui-label">{{ Powerform.l10n.popup.frequency }}</label>
+
+                                            <select name="interval" class="sui-select">
+												<option value="daily">{{ Powerform.l10n.popup.daily }}</option>
+												<option value="weekly">{{ Powerform.l10n.popup.weekly }}</option>
+												<option value="monthly">{{ Powerform.l10n.popup.monthly }}</option>
+											</select>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="sui-col-md-6">
+
+                                        <div class="sui-form-field">
+
+                                            <label class="sui-label">{{ Powerform.l10n.popup.day_time }}</label>
+
+                                            <select name="hour" class="sui-select">
+												<option value="00:00">12:00 AM</option>
+												<option value="01:00">01:00 AM</option>
+												<option value="02:00">02:00 AM</option>
+												<option value="03:00">03:00 AM</option>
+												<option value="04:00">04:00 AM</option>
+												<option value="05:00">05:00 AM</option>
+												<option value="06:00">06:00 AM</option>
+												<option value="07:00">07:00 AM</option>
+												<option value="08:00">08:00 AM</option>
+												<option value="09:00">09:00 AM</option>
+												<option value="10:00">10:00 AM</option>
+												<option value="11:00">11:00 AM</option>
+												<option value="12:00">12:00 PM</option>
+												<option value="13:00">01:00 PM</option>
+												<option value="14:00">02:00 PM</option>
+												<option value="15:00">03:00 PM</option>
+												<option value="16:00">04:00 PM</option>
+												<option value="17:00">05:00 PM</option>
+												<option value="18:00">06:00 PM</option>
+												<option value="19:00">07:00 PM</option>
+												<option value="20:00">08:00 PM</option>
+												<option value="21:00">09:00 PM</option>
+												<option value="22:00">10:00 PM</option>
+												<option value="23:00">11:00 PM</option>
+											</select>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="sui-form-field">
+
+                                    <label class="sui-label">{{ Powerform.l10n.popup.week_day }}</label>
+
+                                    <select name="day" class="sui-select">
+										<option value="mon">{{ Powerform.l10n.popup.monday }}</option>
+										<option value="tue">{{ Powerform.l10n.popup.tuesday }}</option>
+										<option value="wed">{{ Powerform.l10n.popup.wednesday }}</option>
+										<option value="thu">{{ Powerform.l10n.popup.thursday }}</option>
+										<option value="fri">{{ Powerform.l10n.popup.friday }}</option>
+										<option value="sat">{{ Powerform.l10n.popup.saturday }}</option>
+										<option value="sun">{{ Powerform.l10n.popup.sunday }}</option>
+									</select>
+
+                                </div>
+
+                                <div class="sui-form-field">
+
+                                    <label class="sui-label">{{ Powerform.l10n.popup.day_month }}</label>
+
+                                    <select name="month_day" class="sui-select">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+										<option value="23">23</option>
+										<option value="24">24</option>
+										<option value="25">25</option>
+										<option value="26">26</option>
+										<option value="27">27</option>
+										<option value="28">28</option>
+										<option value="29">29</option>
+										<option value="30">30</option>
+										<option value="31">31</option>
+									</select>
+
+                                </div>
+
+                                <div id="powerform-export-schedule-email" class="sui-form-field" style="margin-bottom: 20px;">
+
+                                    <label class="sui-label">{{ Powerform.l10n.popup.email_to }}</label>
+
+                                    <select name="email[]" class="sui-select fui-multi-select psource-select" multiple="multiple">
+										{[ _.each( Powerform.l10n.exporter.email, function ( email ) { ]}
+										<option value="{{ email }}" selected="selected">{{ email }}</option>
+										{[ }) ]}
+									</select>
+
+                                    <input type="hidden" name="form_id" value="{{ Powerform.l10n.exporter.form_id }}" />
+                                    <input type="hidden" name="form_type" value="{{ Powerform.l10n.exporter.form_type }}" />
+                                    <input type="hidden" name="action" value="powerform_export_entries" />
+                                    <input type="hidden" name="_powerform_nonce" value="{{ Powerform.l10n.exporter.export_nonce }}" />
+
+                                </div>
+
+                                <label for="powerform-send-if-new-exports" class="sui-checkbox sui-checkbox-sm sui-checkbox-stacked">
+									<input
+										type="checkbox"
+										name="if_new"
+										value="true"
+										id="powerform-send-if-new-exports"
+										class="powerform-field-singular"
+									/>
+									<span aria-hidden="true"></span>
+									<span class="sui-description">{{ Powerform.l10n.popup.scheduled_export_if_new }}</span>
+								</label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="sui-box-footer">
+
+            <button class="sui-button sui-button-ghost powerform-popup-cancel" data-a11y-dialog-hide="powerform-popup">{{ Powerform.l10n.popup.cancel }}</button>
+
+            <div class="sui-actions-right">
+
+                <button type="submit" class="sui-button psource-action-done">{{ Powerform.l10n.popup.save }}</button>
+
+            </div>
+
+        </div>
+
+    </script>
+
+    <script type="text/template" id="powerform-new-form-popup-tpl">
+
+        <div class="psource-box--congrats">
+
+            <div class="psource-congrats--image"></div>
+
+            <div class="psource-congrats--message">
+
+                <p><strong>{{ title }}</strong> {{ Powerform.l10n.popup.is_ready }}<br/> {{ Powerform.l10n.popup.new_form_desc }}</p>
+
+            </div>
+
+        </div>
+
+    </script>
+
+    <script type="text/template" id="powerform-delete-popup-tpl">
+
+        <div class="sui-box-body">
+            <span class="sui-description">{{ content }}</span>
+        </div>
+
+        <div class="sui-box-footer">
+            <button type="button" class="sui-button sui-button-ghost powerform-popup-cancel" data-a11y-dialog-hide>{{ Powerform.l10n.popup.cancel }}</button>
+            <form method="post" class="delete-action">
+                <input type="hidden" name="powerform_action" value="delete">
+                <input type="hidden" name="id" value="{{ id }}">
+                <input type="hidden" id="powerformNonce" name="powerformNonce" value="{{ nonce }}">
+                <input type="hidden" id="powerformEntryNonce" name="powerformEntryNonce" value="{{ nonce }}">
+                <input type="hidden" name="_wp_http_referer" value="{{ referrer }}">
+                <button type="submit" class="sui-button sui-button-ghost sui-button-red popup-confirmation-confirm">
+				    <i class="sui-icon-trash" aria-hidden="true"></i>
+				    {{ Powerform.l10n.popup.delete }}
+			    </button>
+            </form>
+        </div>
+
+    </script>
+
+    <script type="text/template" id="powerform-confirmation-popup-tpl">
+
+        <div class="sui-box-body">
+            <p>{{ confirmation_message }}</p>
+        </div>
+
+        <form class="sui-box-footer" method="post">
+            <button type="button" class="sui-button popup-confirmation-cancel">{{ Powerform.l10n.popup.cancel }}</button>
+            <div class="sui-actions-right">
+                <button type="button" class="sui-button sui-button-red popup-confirmation-confirm">{{ Powerform.l10n.popup.delete }}</button>
+            </div>
+        </form>
+
+    </script>
+
+    <script type="text/template" id="powerform-reset-plugin-settings-popup-tpl">
+
+        <div class="sui-box-body">
+            <span class="sui-description">{{ content }}</span>
+        </div>
+
+        <div class="sui-box-footer">
+            <button type="button" class="sui-button sui-button-ghost powerform-popup-cancel" data-a11y-dialog-hide>{{ Powerform.l10n.popup.cancel }}</button>
+            <form method="post" class="delete-action">
+                <input type="hidden" name="powerform_action" value="reset_plugin_settings">
+                <input type="hidden" id="powerformNonce" name="powerformNonce" value="{{ nonce }}">
+                <input type="hidden" name="_wp_http_referer" value="{{ referrer }}">
+                <button type="submit" class="sui-button sui-button-ghost sui-button-red popup-confirmation-confirm">
+					<i class="sui-icon-refresh" aria-hidden="true"></i>
+					{{ Powerform.l10n.popup.reset }}
+				</button>
+            </form>
+        </div>
+
+    </script>
+
+    <script type="text/template" id="powerform-disconnect-stripe-popup-tpl">
+
+        <div class="sui-box-body">
+            <span class="sui-description">{{ content }}</span>
+        </div>
+
+        <div class="sui-box-footer">
+            <button type="button" class="sui-button sui-button-ghost powerform-popup-cancel" data-a11y-dialog-hide>{{ Powerform.l10n.popup.cancel }}</button>
+            <button type="submit" class="disconnect_stripe sui-button sui-button-ghost sui-button-red popup-confirmation-confirm" data-nonce="{{ nonce }}" data-action="disconnect_stripe">
+				<i class="sui-icon-refresh" aria-hidden="true"></i>
+				{{ Powerform.l10n.popup.disconnect }}
+			</button>
+        </div>
+
+    </script>
+    <script type="text/template" id="powerform-disconnect-paypal-popup-tpl">
+
+        <div class="sui-box-body">
+            <span class="sui-description">{{ content }}</span>
+        </div>
+
+        <div class="sui-box-footer">
+            <button type="button" class="sui-button sui-button-ghost powerform-popup-cancel" data-a11y-dialog-hide>{{ Powerform.l10n.popup.cancel }}</button>
+            <button type="submit" class="disconnect_paypal sui-button sui-button-ghost sui-button-red popup-confirmation-confirm" data-nonce="{{ nonce }}" data-action="disconnect_paypal">
+				{{ Powerform.l10n.popup.disconnect }}
+			</button>
+        </div>
+
+    </script>
+
+    <script type="text/template" id="powerform-delete-poll-popup-tpl">
+
+        <div class="sui-box-body">
+            <span class="sui-description">{{ content }}</span>
+        </div>
+
+        <div class="sui-box-footer">
+            <button type="button" class="sui-button sui-button-ghost powerform-popup-cancel" data-a11y-dialog-hide>{{ Powerform.l10n.popup.cancel }}</button>
+            <button type="submit" class="delete-poll-submission sui-button sui-button-ghost sui-button-red popup-confirmation-confirm" data-nonce="{{ nonce }}" data-id="{{ id }}" data-action="delete_poll_submissions">
+				{{ Powerform.l10n.popup.delete }}
+			</button>
+        </div>
+
+    </script>
+
+    <script type="text/template" id="powerform-approve-user-popup-tpl">
+
+        <div class="sui-box-body">
+            <span class="sui-description">{{ content }}</span>
+        </div>
+
+        <div class="sui-box-footer">
+            <button type="button" class="sui-button sui-button-ghost powerform-popup-cancel" data-a11y-dialog-hide>{{ Powerform.l10n.popup.cancel }}</button>
+            <form method="post" class="form-approve-user">
+                <input type="hidden" name="powerform_action" value="approve_user">
+                <input type="hidden" name="id" value="{{ id }}">
+                <input type="hidden" name="activationKey" value="{{ activationKey }}">
+                <input type="hidden" id="powerformNonce" name="powerformNonce" value="{{ nonce }}">
+                <input type="hidden" id="powerformEntryNonce" name="powerformEntryNonce" value="{{ nonce }}">
+                <input type="hidden" name="_wp_http_referer" value="{{ referrer }}">
+                <button type="submit" class="sui-button approve-user popup-confirmation-confirm">
+					{{ Powerform.l10n.popup.approve_user }}
+				</button>
+            </form>
+        </div>
+
+    </script>
+
+    <script type="text/template" id="powerform-delete-unconfirmed-user-popup-tpl">
+
+        <div class="sui-box-body">
+            <span class="sui-description">{{ content }}</span>
+        </div>
+
+        <div class="sui-box-footer">
+            <button type="button" class="sui-button sui-button-ghost powerform-popup-cancel" data-a11y-dialog-hide>{{ Powerform.l10n.popup.cancel }}</button>
+            <form method="post" class="form-delete-unconfirmed-user">
+                <input type="hidden" name="powerformAction" value="delete-unconfirmed-user">
+                <input type="hidden" name="formId" value="{{ formId }}">
+                <input type="hidden" name="entryId" value="{{ entryId }}">
+                <input type="hidden" name="activationKey" value="{{ activationKey }}">
+                <input type="hidden" id="powerformNonceDeleteUnconfirmedUser" name="powerformNonceDeleteUnconfirmedUser" value="{{ nonce }}">
+                <input type="hidden" name="_wp_http_referer" value="{{ referrer }}">
+                <button type="submit" class="sui-button sui-button-ghost sui-button-red delete-unconfirmed-user popup-confirmation-confirm">
+					<i class="sui-icon-trash" aria-hidden="true"></i>
+					{{ Powerform.l10n.popup.delete }}
+				</button>
+            </form>
+        </div>
+
+    </script>
+
+</div>

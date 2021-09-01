@@ -1,0 +1,13 @@
+<?php if ( powerform_array_value_exists( $properties, 'cform-color-settings' ) ) { ?> .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-error-message {
+<?php if ( powerform_array_value_exists( $properties, 'label-validation-color' ) && !empty( $properties['label-validation-color'] ) ) { ?> color:
+<?php echo $properties['label-validation-color'] ?>;
+<?php } else { ?> color: #E04562;
+<?php } ?> }
+
+<?php } else { ?> .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-error-message { color: #E04562; }
+
+<?php } ?>

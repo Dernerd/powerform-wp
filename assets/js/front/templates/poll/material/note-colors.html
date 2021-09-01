@@ -1,0 +1,15 @@
+<?php if ( powerform_array_value_exists( $properties, 'poll-colors' ) ) { ?> .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-note, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-note {
+<?php if ( powerform_array_value_exists( $properties, 'novotes_text' ) ) { ?> color:
+<?php echo $properties['novotes_text'] ?>;
+<?php } else { ?> color: #333333;
+<?php } ?> }
+
+<?php } else { ?> .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-note, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-note { color: #333333; }
+
+<?php } ?>

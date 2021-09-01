@@ -1,0 +1,63 @@
+<?php if ( powerform_array_value_exists( $properties, 'cform-color-settings' ) ) { ?> .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-break, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-break {
+<?php if ( powerform_array_value_exists( $properties, 'timeline-border' ) && !empty( $properties['timeline-border'] ) ) { ?> background-color:
+<?php echo $properties['timeline-border'] ?>;
+<?php } else { ?> background-color: #777771;
+<?php } ?> } .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step .powerform-step-label, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step .powerform-step-label {
+<?php if ( powerform_array_value_exists( $properties, 'timeline-text-current' ) && !empty( $properties['timeline-text-current'] ) ) { ?> color:
+<?php echo $properties['timeline-text-current'] ?>;
+<?php } else { ?> color: #17A8E3;
+<?php } ?> } .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step .powerform-step-dot, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step .powerform-step-dot {
+<?php if ( powerform_array_value_exists( $properties, 'timeline-dot-border-current' ) && !empty( $properties['timeline-dot-border-current'] ) ) { ?> border-color:
+<?php echo $properties['timeline-dot-border-current'] ?>;
+<?php } else { ?> border-color: #777771;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'timeline-dot-background-current' ) && !empty( $properties['timeline-dot-background-current'] ) ) { ?> background-color:
+<?php echo $properties['timeline-dot-background-current'] ?>;
+<?php } else { ?> background-color: #17A8E3;
+<?php } ?> } .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step.powerform-current ~ .powerform-step .powerform-step-label, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step.powerform-current ~ .powerform-step .powerform-step-label {
+<?php if ( powerform_array_value_exists( $properties, 'timeline-text' ) && !empty( $properties['timeline-text'] ) ) { ?> color:
+<?php echo $properties['timeline-text'] ?>;
+<?php } else { ?> color: #777771;
+<?php } ?> } .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step.powerform-current ~ .powerform-step .powerform-step-dot, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step.powerform-current ~ .powerform-step .powerform-step-dot {
+<?php if ( powerform_array_value_exists( $properties, 'timeline-dot-border' ) && !empty( $properties['timeline-dot-border'] ) ) { ?> border-color:
+<?php echo $properties['timeline-dot-border'] ?>;
+<?php } else { ?> border-color: #777771;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'timeline-dot-background' ) && !empty( $properties['timeline-dot-background'] ) ) { ?> background-color:
+<?php echo $properties['timeline-dot-background'] ?>;
+<?php } else { ?> background-color: #777771;
+<?php } ?> }
+
+<?php } else { ?> .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-break, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-break { background-color: #777771; } .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step .powerform-step-label, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step .powerform-step-label { color: #17A8E3; } .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step .powerform-step-dot, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step .powerform-step-dot { border-color: #777771; background-color: #17A8E3; } .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step.powerform-current ~ .powerform-step .powerform-step-label, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step.powerform-current ~ .powerform-step .powerform-step-label { color: #777771; } .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step.powerform-current ~ .powerform-step .powerform-step-dot, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-pagination-steps .powerform-step.powerform-current ~ .powerform-step .powerform-step-dot { border-color: #777771; background-color: #777771; }
+
+<?php } ?>

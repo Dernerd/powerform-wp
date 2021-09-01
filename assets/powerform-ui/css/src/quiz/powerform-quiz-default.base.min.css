@@ -1,0 +1,1485 @@
+/*!
+ * WPMU DEV Powerform UI
+ * Copyright 2019 Incsub (https://incsub.com)
+ * Licensed under GPL v3 (http://www.gnu.org/licenses/gpl-3.0.html)
+ */
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--image span,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=checkbox],
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=radio],
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--image span,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=checkbox],
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=radio] {
+    width: 1px!important;
+    height: 1px!important;
+    overflow: hidden!important;
+    position: absolute!important;
+    white-space: nowrap!important;
+    margin: -1px!important;
+    padding: 0!important;
+    border: 0!important;
+    clip: rect(0 0 0 0)!important;
+    -webkit-clip-path: inset(50%)!important;
+    clip-path: inset(50%)!important
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes click-animation {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: .2;
+        -khtml-opacity: .2
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50%) scale(2);
+        transform: translate(-50%, -50%) scale(2);
+        opacity: .1;
+        -khtml-opacity: .1
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+        -khtml-opacity: 0
+    }
+}
+
+@keyframes click-animation {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: .2;
+        -khtml-opacity: .2
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50%) scale(2);
+        transform: translate(-50%, -50%) scale(2);
+        opacity: .1;
+        -khtml-opacity: .1
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+        -khtml-opacity: 0
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--title,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--title {
+    margin: 0 0 20px;
+    padding: 0;
+    border: 0;
+    line-height: 1.18em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--title:after,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--title:before,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--title:after,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--title:before {
+    content: unset;
+    display: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description {
+    margin: 0 0 20px;
+    padding: 0;
+    border: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description p,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description p {
+    line-height: 1.5em;
+    word-break: break-word
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description p strong,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description strong,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description p strong,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description strong {
+    font-weight: 700
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description p:first-child,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description p:first-child {
+    margin-top: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description p:last-child,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--description p:last-child {
+    margin-bottom: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--image,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--image {
+    width: auto;
+    min-width: 1px;
+    max-width: 100%;
+    height: auto;
+    min-height: 1px;
+    max-height: 100%;
+    float: none;
+    display: block;
+    position: relative;
+    margin: 20px 0;
+    padding: 0;
+    border: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result {
+    border-top-width: 1px;
+    border-top-style: solid
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-button,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-button {
+    margin: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ol,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary p,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ul,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ol,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary p,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ul {
+    margin: 22px 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ol:first-child,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary p:first-child,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ul:first-child,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ol:first-child,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary p:first-child,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ul:first-child {
+    margin-top: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ol:last-child,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary p:last-child,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ul:last-child,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ol:last-child,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary p:last-child,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ul:last-child {
+    margin-bottom: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary p,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary p {
+    line-height: 1.19em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary li,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ol,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ul,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary li,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ol,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary ul {
+    line-height: 1.4em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary li,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary li {
+    margin: 10px 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary li:first-child,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary li:first-child {
+    margin-top: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary li:last-child,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary li:last-child {
+    margin-bottom: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary[data-align=center],
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary[data-align=center] {
+    text-align: center
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary[data-align=right],
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--summary[data-align=right] {
+    text-align: right
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social {
+    border-top-width: 1px;
+    border-top-style: solid
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--text,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--text {
+    margin: 0 0 20px;
+    line-height: 1.35em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 0 -10px;
+    padding: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li {
+    list-style: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li {
+    padding: 0 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a {
+    display: block;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a:active,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a:focus,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a:hover,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a:active,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a:focus,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a:hover {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-decoration: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a:focus,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a:hover,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a:focus,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a:hover {
+    opacity: .6;
+    -khtml-opacity: .6
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a [class*=powerform-icon-],
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a [class*=powerform-icon-] {
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a .powerform-icon-social-facebook,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a .powerform-icon-social-facebook {
+    color: #0084bf
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a .powerform-icon-social-twitter,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a .powerform-icon-social-twitter {
+    color: #4a90e2
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a .powerform-icon-social-linkedin,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--social .powerform-social--icons li a .powerform-icon-social-linkedin {
+    color: #0084bf
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=center],
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=center] {
+    margin-right: auto;
+    margin-left: auto
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-quiz--title,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-quiz--title {
+    text-align: center
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-quiz--description,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-quiz--description {
+    text-align: center
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-quiz--image,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-quiz--image {
+    margin-right: auto;
+    margin-left: auto
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-quiz--result,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-quiz--result {
+    text-align: center
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-quiz--social .powerform-social--icons,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-quiz--social .powerform-social--icons {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=right],
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=right] {
+    margin-right: 0;
+    margin-left: auto
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-quiz--title,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-quiz--title {
+    text-align: right
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-quiz--description,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-quiz--description {
+    text-align: right
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-quiz--image,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-quiz--image {
+    margin-right: 0;
+    margin-left: auto
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-quiz--result,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-quiz--result {
+    text-align: right
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-quiz--social .powerform-social--icons,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-quiz--social .powerform-social--icons {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-question .powerform-legend,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-question .powerform-legend {
+    display: block;
+    padding: 0;
+    border: 0;
+    line-height: 1.5em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-question .powerform-image,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-question .powerform-image {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-question .powerform-image img,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-question .powerform-image img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-question .powerform-question--result,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-question .powerform-question--result {
+    display: none;
+    line-height: 1.9em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-question .powerform-question--result.powerform-show,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-question .powerform-question--result.powerform-show {
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-question:not(.powerform-last):after,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-question:not(.powerform-last):after {
+    content: " ";
+    width: 100%;
+    height: 1px;
+    display: block;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-question:focus,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-question:focus {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-question:not(.powerform-last),
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-question:not(.powerform-last) {
+    margin-bottom: 20px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-question:not(.powerform-last):after,
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-question:not(.powerform-last):after {
+    margin-top: 20px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-image,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-legend,
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-image,
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-legend {
+    margin: 0 0 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-answer,
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-answer {
+    margin-top: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-question--result,
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-question--result {
+    margin: 10px 0 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-quiz--result,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-quiz--social,
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-quiz--result,
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=default] .powerform-quiz--social {
+    margin-top: 20px;
+    padding-top: 20px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-question:not(.powerform-last),
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-question:not(.powerform-last) {
+    margin-bottom: 8px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-question:not(.powerform-last):after,
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-question:not(.powerform-last):after {
+    margin-top: 8px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-legend,
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-legend {
+    margin: 0 0 4px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-answer,
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-answer {
+    margin-top: 4px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-question--result,
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-question--result {
+    margin: 4px 0 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-quiz--result,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-quiz--social,
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-quiz--result,
+.powerform-ui.powerform-quiz[data-design=default][data-spacing=enclosed] .powerform-quiz--social {
+    margin-top: 8px;
+    padding-top: 8px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-legend,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-legend {
+    text-align: center
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-image img,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-image img {
+    margin-right: auto;
+    margin-left: auto
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-question--result,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=center] .powerform-question--result {
+    text-align: center
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-legend,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-legend {
+    text-align: right
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-image img,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-image img {
+    margin-right: 0;
+    margin-left: auto
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-question--result,
+.powerform-ui.powerform-quiz[data-design=default][data-alignment=right] .powerform-question--result {
+    text-align: right
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-question:not(.powerform-last):after,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-question:not(.powerform-last):after {
+        margin-top: 30px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-question:not(.powerform-last),
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-question:not(.powerform-last) {
+        margin-bottom: 30px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-legend,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-legend {
+        margin-bottom: 15px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-answer,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-answer {
+        margin-top: 15px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-question--result,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-question--result {
+        margin-top: 15px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-quiz--result,
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-quiz--social,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-quiz--result,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=default] .powerform-quiz--social {
+        margin-top: 30px;
+        padding-top: 30px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-question:not(.powerform-last):after,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-question:not(.powerform-last):after {
+        margin-top: 14px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-question:not(.powerform-last),
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-question:not(.powerform-last) {
+        margin-bottom: 14px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-legend,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-legend {
+        margin-bottom: 7px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-answer,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-answer {
+        margin-top: 7px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-question--result,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-question--result {
+        margin-top: 7px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-quiz--result,
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-quiz--social,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-quiz--result,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--list[data-spacing=enclosed] .powerform-quiz--social {
+        margin-top: 14px;
+        padding-top: 14px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-question:not(.powerform-last):after,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-question:not(.powerform-last):after {
+        width: auto;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-question,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-question {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-image,
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-legend,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-image,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-legend {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        margin-bottom: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-question--result,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-question--result {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-columns="2"] .powerform-answer,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-columns="2"] .powerform-answer {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-columns="3"] .powerform-answer,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-columns="3"] .powerform-answer {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+        flex: 0 0 33.33333%
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-columns="4"] .powerform-answer,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-columns="4"] .powerform-answer {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-columns="5"] .powerform-answer,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-columns="5"] .powerform-answer {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-columns="6"] .powerform-answer,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-columns="6"] .powerform-answer {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 16.66667%;
+        flex: 0 0 16.66667%
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-alignment=center] .powerform-question,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-alignment=center] .powerform-question {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-alignment=right] .powerform-question,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-alignment=right] .powerform-question {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-question:not(.powerform-last):after,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-question:not(.powerform-last):after {
+        margin-top: 30px;
+        margin-right: 7.5px;
+        margin-left: 7.5px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-question:not(.powerform-last),
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-question:not(.powerform-last) {
+        margin-bottom: 30px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-question,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-question {
+        margin-right: -7.5px;
+        margin-left: -7.5px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-image+.powerform-image,
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-legend+.powerform-image,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-image+.powerform-image,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-legend+.powerform-image {
+        margin-top: 15px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-image,
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-legend,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-image,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-legend {
+        padding: 0 7.5px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-answer,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-answer {
+        margin-top: 15px;
+        padding: 0 7.5px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-question--result,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-question--result {
+        margin-top: 15px;
+        padding: 0 7.5px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-quiz--result,
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-quiz--social,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-quiz--result,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=default] .powerform-quiz--social {
+        margin-top: 30px;
+        padding-top: 30px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-question:not(.powerform-last):after,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-question:not(.powerform-last):after {
+        margin-top: 14px;
+        margin-right: 3.5px;
+        margin-left: 3.5px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-question:not(.powerform-last),
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-question:not(.powerform-last) {
+        margin-bottom: 14px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-question,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-question {
+        margin-right: -3.5px;
+        margin-left: -3.5px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-image,
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-legend,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-image,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-legend {
+        padding: 0 3.5px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-answer,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-answer {
+        margin-top: 7px;
+        padding: 0 3.5px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-question--result,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-question--result {
+        margin-top: 7px;
+        padding: 0 3.5px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-quiz--result,
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-quiz--social,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-quiz--result,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid[data-spacing=enclosed] .powerform-quiz--social {
+        margin-top: 14px;
+        padding-top: 14px
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    pointer-events: none;
+    display: block;
+    position: relative
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=checkbox]:disabled:not(:checked):not([checked])+.powerform-answer--design,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=checkbox][disabled]:not(:checked):not([checked])+.powerform-answer--design,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=radio]:disabled:not(:checked):not([checked])+.powerform-answer--design,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=radio][disabled]:not(:checked):not([checked])+.powerform-answer--design,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=checkbox]:disabled:not(:checked):not([checked])+.powerform-answer--design,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=checkbox][disabled]:not(:checked):not([checked])+.powerform-answer--design,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=radio]:disabled:not(:checked):not([checked])+.powerform-answer--design,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=radio][disabled]:not(:checked):not([checked])+.powerform-answer--design {
+    opacity: .6;
+    -khtml-opacity: .6
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=checkbox]:disabled+.powerform-answer--design,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=checkbox][disabled]+.powerform-answer--design,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=radio]:disabled+.powerform-answer--design,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=radio][disabled]+.powerform-answer--design,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=checkbox]:disabled+.powerform-answer--design,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=checkbox][disabled]+.powerform-answer--design,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=radio]:disabled+.powerform-answer--design,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer input[type=radio][disabled]+.powerform-answer--design {
+    pointer-events: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design {
+    cursor: pointer;
+    pointer-events: all;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 9px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--image,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--image {
+    width: 80px;
+    height: 80px;
+    display: block;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--image+.powerform-answer--status,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--image+.powerform-answer--status {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--status,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--status {
+    width: 30px;
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--status [class*=powerform-icon-],
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--status [class*=powerform-icon-] {
+    display: block;
+    font-size: 12px;
+    line-height: 12px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--status [class*=powerform-icon-]:before,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--status [class*=powerform-icon-]:before {
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--status+.powerform-answer--name,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--status+.powerform-answer--name {
+    margin-left: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--name,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--design .powerform-answer--name {
+    min-width: 1px;
+    display: block;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    line-height: 1.75em;
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--status,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer .powerform-answer--status {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer:focus,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer:focus {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer.powerform-only--image,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer.powerform-only--image {
+    width: 100px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer.powerform-only--image .powerform-answer--name,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-answer.powerform-only--image .powerform-answer--status,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer.powerform-only--image .powerform-answer--name,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-answer.powerform-only--image .powerform-answer--status {
+    display: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-question[data-question-type=personality] .powerform-answer input[type=checkbox]:checked+.powerform-answer--design .powerform-answer--status [class*=powerform-icon-],
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-question[data-question-type=personality] .powerform-answer input[type=radio]:checked+.powerform-answer--design .powerform-answer--status [class*=powerform-icon-],
+.powerform-ui.powerform-quiz[data-design=default] .powerform-question[data-question-type=personality] .powerform-answer input[type=checkbox]:checked+.powerform-answer--design .powerform-answer--status [class*=powerform-icon-],
+.powerform-ui.powerform-quiz[data-design=default] .powerform-question[data-question-type=personality] .powerform-answer input[type=radio]:checked+.powerform-answer--design .powerform-answer--status [class*=powerform-icon-] {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-question[data-question-type=personality] .powerform-answer .powerform-answer--design .powerform-answer--status [class*=powerform-icon-],
+.powerform-ui.powerform-quiz[data-design=default] .powerform-question[data-question-type=personality] .powerform-answer .powerform-answer--design .powerform-answer--status [class*=powerform-icon-] {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default].powerform-quiz--list[data-alignment=center] .powerform-answer.powerform-only--image,
+.powerform-ui.powerform-quiz[data-design=default].powerform-quiz--list[data-alignment=center] .powerform-answer.powerform-only--image {
+    margin-right: auto;
+    margin-left: auto
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default].powerform-quiz--list[data-alignment=right] .powerform-answer.powerform-only--image,
+.powerform-ui.powerform-quiz[data-design=default].powerform-quiz--list[data-alignment=right] .powerform-answer.powerform-only--image {
+    margin-right: 0;
+    margin-left: auto
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-answer .powerform-answer--design .powerform-answer--image~[class*=powerform-answer-],
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-answer .powerform-answer--design .powerform-answer--image~[class*=powerform-answer-] {
+        margin-top: 10px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-answer .powerform-answer--design .powerform-answer--image+.powerform-answer--status,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-answer .powerform-answer--design .powerform-answer--image+.powerform-answer--status {
+        margin-left: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-answer .powerform-answer--design .powerform-answer--image,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-answer .powerform-answer--design .powerform-answer--image {
+        width: 100%;
+        height: 170px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-answer .powerform-answer--design .powerform-answer--status,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-answer .powerform-answer--design .powerform-answer--status {
+        margin-bottom: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-answer .powerform-answer--design,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-answer .powerform-answer--design {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-answer.powerform-only--image,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small).powerform-quiz--grid .powerform-answer.powerform-only--image {
+        width: 100%
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result {
+    display: block;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    text-align: left
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--quiz-name,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--quiz-name {
+    min-width: 1px;
+    display: block;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    margin-left: 10px;
+    line-height: 1.75em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake {
+    width: 40px;
+    min-width: auto;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake span[class*=powerform-icon-],
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake span[class*=powerform-icon-] {
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake span[class*=powerform-icon-]:before,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake span[class*=powerform-icon-]:before {
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake span:not([class*=powerform-icon-]),
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake span:not([class*=powerform-icon-]) {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%)
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info+.powerform-result--content,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--info+.powerform-result--content {
+    margin-top: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content {
+    display: block;
+    text-align: left
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text {
+    padding: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--title,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--title {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--title+.powerform-result--description,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--title+.powerform-result--description {
+    margin-top: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--description,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--description {
+    margin: 0;
+    padding: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--description,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--description p,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--description,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--description p {
+    line-height: 1.75em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--description p,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--description p {
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--description p:not(:last-child),
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text .powerform-result--description p:not(:last-child) {
+    margin-bottom: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text+.powerform-result--image,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text+.powerform-result--image {
+    margin-top: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--image,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--image {
+    width: auto;
+    max-width: 100%;
+    min-width: 1px;
+    height: auto;
+    display: block;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--image img,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--image img {
+    width: 100%;
+    height: auto;
+    display: block
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--quiz-name,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--quiz-name {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        margin-right: 10px;
+        margin-left: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake span[class*=powerform-icon-],
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake span[class*=powerform-icon-] {
+        display: inline-block;
+        margin-right: 4px
+    }
+}
+
+@media (min-width:783px) and (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake span[class*=powerform-icon-]:before,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake span[class*=powerform-icon-]:before {
+        display: inline
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake span:not([class*=powerform-icon-]),
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake span:not([class*=powerform-icon-]) {
+        width: auto;
+        height: auto;
+        overflow: initial;
+        position: initial;
+        white-space: initial;
+        margin: 0;
+        clip: unset;
+        -webkit-clip-path: none;
+        clip-path: none
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--info .powerform-result--retake {
+        width: auto;
+        min-width: 1px;
+        height: auto;
+        display: block;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--info,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--info {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text+.powerform-result--image,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text+.powerform-result--image {
+        margin-top: 0;
+        margin-left: 10px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--text {
+        min-width: 1px;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--image img,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--image img {
+        opacity: 0;
+        -khtml-opacity: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--image,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--content .powerform-result--image {
+        width: auto;
+        min-width: 1px;
+        max-width: 50%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--content,
+    .powerform-ui.powerform-quiz[data-design=default]:not(.powerform-size--small) .powerform-quiz--result .powerform-result .powerform-result--content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button {
+    width: auto;
+    min-width: 100px;
+    max-width: unset;
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 0 0;
+    padding: 10px;
+    border: 0;
+    border-radius: 2px;
+    background-image: unset;
+    line-height: 1.45em;
+    text-align: center;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button span,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button span {
+    display: block;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button .powerform-icon-loader,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button .powerform-icon-loader {
+    opacity: 0;
+    -khtml-opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button .powerform-icon-loader:before,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button .powerform-icon-loader:before {
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button:active,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button:focus,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button:hover,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button:active,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button:focus,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button:hover {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-decoration: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button:active,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button:focus,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button:hover,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button:active,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button:focus,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button:hover {
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .6);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .6)
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button:active span[aria-hidden],
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button:active span[aria-hidden] {
+    width: 120%;
+    padding: 120% 0 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button.powerform-disabled,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button.powerform-onload,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button:disabled,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button.powerform-disabled,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button.powerform-onload,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button:disabled {
+    opacity: .5;
+    -khtml-opacity: .5;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button.powerform-onload span,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button.powerform-onload span {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button.powerform-onload .powerform-icon-loader,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button.powerform-onload .powerform-icon-loader {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-quiz[data-design=default] .powerform-button:last-child,
+.powerform-ui.powerform-quiz[data-design=default] .powerform-button:last-child {
+    margin-right: 0
+}

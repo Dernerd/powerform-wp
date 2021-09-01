@@ -1,0 +1,15 @@
+<?php if ( powerform_array_value_exists( $properties, 'poll-colors' ) ) { ?> .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?> .powerform-question, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?> .powerform-question {
+<?php if ( powerform_array_value_exists( $properties, 'poll_question' ) ) { ?> color:
+<?php echo $properties['poll_question'] ?>;
+<?php } else { ?> color: #333333;
+<?php } ?> }
+
+<?php } else { ?> .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?> .powerform-question, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?> .powerform-question { color: #333333; }
+
+<?php } ?>

@@ -1,0 +1,23 @@
+<?php if ( powerform_array_value_exists( $properties, 'cform-color-settings' ) ) { ?> .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-success {
+<?php if ( powerform_array_value_exists( $properties, 'response-success-background' ) && !empty( $properties['response-success-background'] ) ) { ?> background-color:
+<?php echo $properties['response-success-background'] ?>;
+<?php } else { ?> background-color: #BCEEE6;
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-success, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-success p {
+<?php if ( powerform_array_value_exists( $properties, 'response-success-color' ) && !empty( $properties['response-success-color'] ) ) { ?> color:
+<?php echo $properties['response-success-color'] ?>;
+<?php } else { ?> color: #333333;
+<?php } ?> }
+
+<?php } else { ?> .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-success { background-color: #BCEEE6; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-success, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-success p { color: #333333; }
+
+<?php } ?>

@@ -1,0 +1,13 @@
+<?php if ( powerform_array_value_exists( $properties, 'poll-colors' ) ) { ?> .powerform-ui.powerform-poll.powerform-poll-
+
+<?php echo $properties['form_id'] ?> .powerform-chart-legend li {
+<?php if ( powerform_array_value_exists( $properties, 'grid_labels' ) && !empty( $properties['grid_labels'] ) ) { ?> color:
+<?php echo $properties['grid_labels'] ?>;
+<?php } else { ?> color: #777771;
+<?php } ?> }
+
+<?php } else { ?> .powerform-ui.powerform-poll.powerform-poll-
+
+<?php echo $properties['form_id'] ?> .powerform-chart-legend li { color: #777771; }
+
+<?php } ?>

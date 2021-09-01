@@ -1,0 +1,1657 @@
+/*!
+ * WPMU DEV Powerform UI
+ * Copyright 2019 Incsub (https://incsub.com)
+ * Licensed under GPL v3 (http://www.gnu.org/licenses/gpl-3.0.html)
+ */
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material],
+.powerform-ui.powerform-custom-form[data-design=material] {
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-value,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span[aria-hidden]:before,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message.powerform-loading:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span[aria-hidden]:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message.powerform-loading:before {
+    speak: none;
+    line-height: 1;
+    font-family: powerform-icons-font!important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    letter-spacing: 0;
+    -webkit-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga" 1;
+    -webkit-font-variant-ligatures: discretionary-ligatures;
+    font-variant-ligatures: discretionary-ligatures;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox input,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio input,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message.powerform-accessible,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox input,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio input,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message.powerform-accessible {
+    width: 1px!important;
+    height: 1px!important;
+    overflow: hidden!important;
+    position: absolute!important;
+    white-space: nowrap!important;
+    margin: -1px!important;
+    padding: 0!important;
+    border: 0!important;
+    clip: rect(0 0 0 0)!important;
+    -webkit-clip-path: inset(50%)!important;
+    clip-path: inset(50%)!important
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes click-animation {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: .2;
+        -khtml-opacity: .2
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50%) scale(2);
+        transform: translate(-50%, -50%) scale(2);
+        opacity: .1;
+        -khtml-opacity: .1
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+        -khtml-opacity: 0
+    }
+}
+
+@keyframes click-animation {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: .2;
+        -khtml-opacity: .2
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50%) scale(2);
+        transform: translate(-50%, -50%) scale(2);
+        opacity: .1;
+        -khtml-opacity: .1
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+        -khtml-opacity: 0
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material],
+.powerform-ui.powerform-custom-form[data-design=material] {
+    width: 100%;
+    margin: 30px 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-field,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-field {
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-field:focus,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-field:focus {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:first-child,
+.powerform-ui.powerform-custom-form[data-design=material]:first-child {
+    margin-top: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:last-child,
+.powerform-ui.powerform-custom-form[data-design=material]:last-child {
+    margin-bottom: 0
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small):first-child,
+    .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small):first-child {
+        margin-top: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small):last-child,
+    .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small):last-child {
+        margin-bottom: 0
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-fields-disabled>.powerform-pagination>*,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-fields-disabled>:not(.powerform-response-message):not(.powerform-pagination),
+.powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-fields-disabled>.powerform-pagination>*,
+.powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-fields-disabled>:not(.powerform-response-message):not(.powerform-pagination) {
+    opacity: .5;
+    -khtml-opacity: .5;
+    pointer-events: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-fields-disabled>.powerform-pagination>* *,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-fields-disabled>:not(.powerform-response-message):not(.powerform-pagination) *,
+.powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-fields-disabled>.powerform-pagination>* *,
+.powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-fields-disabled>:not(.powerform-response-message):not(.powerform-pagination) * {
+    pointer-events: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-partial-disabled .powerform-row:not(.powerform-paypal-row),
+.powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-partial-disabled .powerform-row:not(.powerform-paypal-row) {
+    cursor: not-allowed
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-partial-disabled .powerform-row:not(.powerform-paypal-row) .powerform-col,
+.powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-partial-disabled .powerform-row:not(.powerform-paypal-row) .powerform-col {
+    opacity: .5;
+    -khtml-opacity: .5
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-partial-disabled .powerform-row:not(.powerform-paypal-row) .powerform-col,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-partial-disabled .powerform-row:not(.powerform-paypal-row) .powerform-col *,
+.powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-partial-disabled .powerform-row:not(.powerform-paypal-row) .powerform-col,
+.powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-partial-disabled .powerform-row:not(.powerform-paypal-row) .powerform-col * {
+    pointer-events: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-partial-disabled .powerform-pagination-footer .powerform-button:not(.powerform-button-submit),
+.powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small).powerform-partial-disabled .powerform-pagination-footer .powerform-button:not(.powerform-button-submit) {
+    opacity: .5;
+    -khtml-opacity: .5;
+    pointer-events: none
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small),
+    .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small) {
+        margin: 30px 0
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message {
+    margin: 0 0 20px;
+    padding: 15px 20px 15px 22px;
+    border-radius: 2px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, .3);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .3);
+    text-align: left
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message p,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.3em;
+    letter-spacing: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message p:not(:last-child),
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message p:not(:last-child) {
+    margin-bottom: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message:active,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message:focus,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message:hover,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message:active,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message:focus,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message:hover {
+    outline: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message:last-child,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message:last-child {
+    margin-bottom: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message[aria-hidden=true],
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message[aria-hidden=true] {
+    display: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message.powerform-loading,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message.powerform-loading {
+    position: relative;
+    padding-left: 46px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message.powerform-loading:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message.powerform-loading:before {
+    content: "◌";
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    font-size: 16px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message.powerform-show,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-response-message.powerform-show {
+    display: block
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small) .powerform-response-message:last-child,
+    .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small) .powerform-response-message:last-child {
+        margin-bottom: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small) .powerform-response-message,
+    .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small) .powerform-response-message {
+        margin-bottom: 30px
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-subtitle,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-title,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-subtitle,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-title {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-subtitle:after,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-subtitle:before,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-title:after,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-title:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-subtitle:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-subtitle:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-title:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-title:before {
+    content: unset;
+    display: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-title,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-title {
+    line-height: 1em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-title+.powerform-subtitle,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-title+.powerform-subtitle {
+    margin-top: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-subtitle,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-subtitle {
+    line-height: 1.4em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-border,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-border {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 0;
+    min-height: unset;
+    max-height: unset;
+    display: block;
+    margin: 20px 0 0;
+    padding: 0;
+    border: 0;
+    background-image: unset;
+    background-color: transparent
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-border:first-child,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-border:first-child {
+    margin-top: 0
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small) .powerform-border:first-child,
+    .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small) .powerform-border:first-child {
+        margin-top: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small) .powerform-border,
+    .powerform-ui.powerform-custom-form[data-design=material]:not(.powerform-size--small) .powerform-border {
+        margin-top: 30px
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-label,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-label {
+    cursor: default;
+    display: block;
+    margin: 0;
+    border: 0;
+    line-height: 20px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-label[for],
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-label[for] {
+    cursor: pointer
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] [class*=powerform-floating-],
+.powerform-ui.powerform-custom-form[data-design=material] [class*=powerform-floating-] {
+    pointer-events: none;
+    -webkit-transition: .2s linear;
+    transition: .2s linear
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px)
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-webkit-input-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-moz-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-ms-input-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input::-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input::-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input::-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-ms-input-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input::placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input::placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input::placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input::placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input:-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input:-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input:-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-moz-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-moz-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-ms-input-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input--wrap .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-icon .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-phone .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-webkit-input-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input.powerform-has_icon,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input.powerform-has_icon {
+    padding-left: 26px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input.powerform-has_phone.allow-dropdown,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input.powerform-has_phone.allow-dropdown {
+    padding-left: 41px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input.powerform-has_phone:not(.allow-dropdown),
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--input.powerform-has_phone:not(.allow-dropdown) {
+    padding-left: 30px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-webkit-input-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-moz-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-ms-input-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input::-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input::-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input::-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input::-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input::-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input::-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-ms-input-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input::placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input::placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input::placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input::placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input::placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input::placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input::placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input::placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input:-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input:-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input:-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input:-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input:-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input:-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-moz-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-moz-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input:-ms-input-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input--wrap .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-icon .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-phone .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input--wrap .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-icon .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-phone .powerform-input::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input+.powerform-input-with-suffix .powerform-input::-webkit-input-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--input {
+    padding-left: 0!important
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea {
+    width: 100%;
+    max-height: 140px;
+    overflow-y: hidden;
+    position: absolute;
+    z-index: 1;
+    padding: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-webkit-input-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-moz-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-ms-input-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-ms-input-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-moz-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-moz-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-ms-input-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-webkit-input-placeholder {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea {
+    padding-top: 10px!important
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-webkit-input-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-moz-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-ms-input-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-ms-input-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-moz-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-moz-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-moz-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-ms-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea:-ms-input-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-webkit-input-placeholder,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_filled .powerform-floating--textarea+.powerform-textarea--wrap .powerform-textarea::-webkit-input-placeholder {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-description,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-error-message,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-description,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-error-message {
+    margin: 5px 0 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-description,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 1.5em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-description span,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-description span {
+    min-width: 80px;
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-error-message,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-error-message {
+    display: none;
+    line-height: 2em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-has_error .powerform-error-message,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-has_error .powerform-error-message {
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    display: block;
+    margin: 0;
+    padding: 10px 0 9px;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-radius: 0;
+    background-color: transparent!important;
+    background-image: unset;
+    line-height: 1.3em;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input:active,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input:disabled,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input:focus,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input:hover,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input:active,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input:disabled,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input:focus,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input:hover {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input:disabled,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input:disabled {
+    pointer-events: none;
+    border-style: dotted
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input:disabled:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input:disabled:-moz-placeholder {
+    opacity: .4;
+    -khtml-opacity: .4
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input:disabled::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input:disabled::-moz-placeholder {
+    opacity: .4;
+    -khtml-opacity: .4
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input:disabled:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input:disabled:-ms-input-placeholder {
+    opacity: .4;
+    -khtml-opacity: .4
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input:disabled::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input:disabled::-webkit-input-placeholder {
+    opacity: .4;
+    -khtml-opacity: .4
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input--wrap,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input--wrap {
+    display: block;
+    position: relative
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input--wrap:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input--wrap:after {
+    content: " ";
+    height: 2px;
+    display: block;
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    left: 50%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: .2s linear;
+    transition: .2s linear
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-field.powerform-has_error .powerform-input--wrap:after,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-field.powerform-is_active .powerform-input--wrap:after,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-field.powerform-is_hover .powerform-input--wrap:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-field.powerform-has_error .powerform-input--wrap:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-field.powerform-is_active .powerform-input--wrap:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-field.powerform-is_hover .powerform-input--wrap:after {
+    right: 0;
+    left: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input-with-prefix,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input-with-prefix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input-with-prefix input,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input-with-prefix input {
+    min-width: 50px;
+    display: block;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input-with-prefix .powerform-prefix,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input-with-prefix .powerform-suffix,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input-with-prefix .powerform-prefix,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input-with-prefix .powerform-suffix {
+    display: block;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input-with-prefix .powerform-prefix,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input-with-prefix .powerform-prefix {
+    margin-right: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-input-with-prefix .powerform-suffix,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-input-with-prefix .powerform-suffix {
+    margin-left: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea {
+    width: 100%;
+    min-height: 140px;
+    resize: vertical;
+    display: block;
+    margin: 0;
+    padding: 0 9px 9px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    line-height: 20px;
+    background-image: unset;
+    line-height: 20px;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:active,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:disabled,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:focus,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:hover,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:active,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:disabled,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:focus,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:hover {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:disabled,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:disabled {
+    pointer-events: none;
+    border-style: dotted
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:disabled:-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:disabled:-moz-placeholder {
+    opacity: .4;
+    -khtml-opacity: .4
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:disabled::-moz-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:disabled::-moz-placeholder {
+    opacity: .4;
+    -khtml-opacity: .4
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:disabled:-ms-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:disabled:-ms-input-placeholder {
+    opacity: .4;
+    -khtml-opacity: .4
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:disabled::-webkit-input-placeholder,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea:disabled::-webkit-input-placeholder {
+    opacity: .4;
+    -khtml-opacity: .4
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea--wrap,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea--wrap {
+    position: relative
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea--wrap:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-textarea--wrap:after {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 2px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    opacity: 0;
+    -khtml-opacity: 0;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-field.powerform-has_error .powerform-textarea--wrap:after,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-field.powerform-is_active .powerform-textarea--wrap:after,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-field.powerform-is_hover .powerform-textarea--wrap:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-field.powerform-has_error .powerform-textarea--wrap:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-field.powerform-is_active .powerform-textarea--wrap:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-field.powerform-is_hover .powerform-textarea--wrap:after {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio {
+    cursor: default;
+    pointer-events: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    margin: 5px 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio input:checked:focus+span[aria-hidden]:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio input:checked:focus+span[aria-hidden]:after {
+    -webkit-animation-name: click-animation;
+    animation-name: click-animation
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio input:checked+span[aria-hidden]:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio input:checked+span[aria-hidden]:before {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio input:checked+span[aria-hidden]:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio input:checked+span[aria-hidden]:after {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio span,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio span {
+    cursor: pointer;
+    pointer-events: all;
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio span[aria-hidden],
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio span[aria-hidden] {
+    width: 20px;
+    height: 20px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20px;
+    flex: 0 0 20px;
+    position: relative;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 40px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio span[aria-hidden]:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio span[aria-hidden]:before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    -khtml-opacity: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio span[aria-hidden]:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio span[aria-hidden]:after {
+    content: " ";
+    opacity: 0;
+    -khtml-opacity: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio span[aria-hidden]+span,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio span[aria-hidden]+span {
+    margin-left: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio span:not([aria-hidden]),
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio span:not([aria-hidden]) {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    line-height: 20px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio.powerform-radio-inline,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio.powerform-radio-inline {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-bottom: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio.powerform-radio-inline:last-of-type,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio.powerform-radio-inline:last-of-type {
+    margin-right: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio:not(.powerform-radio-inline):first-child,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio:not(.powerform-radio-inline):first-child {
+    margin-top: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-radio:not(.powerform-radio-inline):last-child,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-radio:not(.powerform-radio-inline):last-child {
+    margin-bottom: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox {
+    cursor: default;
+    pointer-events: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    margin: 5px 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox input:checked:focus+span[aria-hidden]:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox input:checked:focus+span[aria-hidden]:after {
+    -webkit-animation-name: click-animation;
+    animation-name: click-animation
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox input:checked+span[aria-hidden]:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox input:checked+span[aria-hidden]:before {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox input:checked+span[aria-hidden]:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox input:checked+span[aria-hidden]:after {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span {
+    cursor: pointer;
+    pointer-events: all;
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span[aria-hidden],
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span[aria-hidden] {
+    width: 20px;
+    height: 20px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20px;
+    flex: 0 0 20px;
+    position: relative;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 2px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span[aria-hidden]:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span[aria-hidden]:before {
+    content: "✓";
+    opacity: 0;
+    -khtml-opacity: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: inherit;
+    font-size: 12px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span[aria-hidden]:after,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span[aria-hidden]:after {
+    content: " ";
+    opacity: 0;
+    -khtml-opacity: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span[aria-hidden]+span,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span[aria-hidden]+span {
+    margin-left: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span:not([aria-hidden]),
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox span:not([aria-hidden]) {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    line-height: 20px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox.powerform-checkbox-inline,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox.powerform-checkbox-inline {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-bottom: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox.powerform-checkbox-inline:last-of-type,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox.powerform-checkbox-inline:last-of-type {
+    margin-right: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox:not(.powerform-checkbox-inline):first-child,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox:not(.powerform-checkbox-inline):first-child {
+    margin-top: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox:not(.powerform-checkbox-inline):last-child,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-checkbox:not(.powerform-checkbox-inline):last-child {
+    margin-bottom: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container {
+    display: block;
+    margin: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list {
+    position: relative;
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-value-wrapper,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-value-wrapper {
+    position: relative
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-value,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-value {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    border-width: 0;
+    border-style: none;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 -1px 0 0 transparent;
+    box-shadow: inset 0 -1px 0 0 transparent;
+    line-height: 1.3em;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-value:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-value:before {
+    content: " ";
+    height: 2px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    right: 50%;
+    bottom: 0;
+    left: 50%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: .2s linear;
+    transition: .2s linear
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-handle,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-handle {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-handle [class*=powerform-icon-],
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-handle [class*=powerform-icon-] {
+    display: block;
+    font-size: 12px;
+    -webkit-transition: .2s linear;
+    transition: .2s linear
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-handle [class*=powerform-icon-]:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-handle [class*=powerform-icon-]:before {
+    display: block;
+    color: inherit
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-list,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-list {
+    width: 100%;
+    max-height: 210px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+    position: relative;
+    top: -1px;
+    margin: 0;
+    padding: 5px 0;
+    border: 0;
+    border-radius: 0;
+    -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .3)
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-list,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-list li,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-list,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-list li {
+    list-style: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-list li,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container .powerform-select-list .powerform-dropdown-list li {
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    padding: 10px 8px;
+    border: 0;
+    line-height: 20px;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container.powerform-is_open .powerform-select-list .powerform-dropdown-handle [class*=powerform-icon-],
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container.powerform-is_open .powerform-select-list .powerform-dropdown-handle [class*=powerform-icon-] {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container.powerform-is_open .powerform-select-list .powerform-dropdown-list,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-select-container.powerform-is_open .powerform-select-list .powerform-dropdown-list {
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-select-container .powerform-select-list .powerform-value:before,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-is_hover .powerform-select-container .powerform-select-list .powerform-value:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_active .powerform-select-container .powerform-select-list .powerform-value:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-is_hover .powerform-select-container .powerform-select-list .powerform-value:before {
+    right: 0;
+    left: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button {
+    width: auto;
+    min-width: 100px;
+    max-width: unset;
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    cursor: pointer;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin: 0 10px 0 0;
+    padding: 10px;
+    border: 0;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: unset;
+    line-height: 1.45em;
+    text-align: center;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button span,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button span {
+    display: block;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button span[aria-hidden],
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button span[aria-hidden] {
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, .12);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: width 450ms cubic-bezier(.23, 1, .32, 1), .2s ease-out;
+    transition: width 450ms cubic-bezier(.23, 1, .32, 1), .2s ease-out
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button span:not([aria-hidden]),
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button span:not([aria-hidden]) {
+    position: relative;
+    z-index: 2
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button .powerform-icon-loader,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button .powerform-icon-loader {
+    opacity: 0;
+    -khtml-opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button .powerform-icon-loader:before,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button .powerform-icon-loader:before {
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button:active,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button:focus,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button:hover,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button:active,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button:focus,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button:hover {
+    outline: 0;
+    text-decoration: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button.powerform-disabled,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button.powerform-onload,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button:disabled,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button.powerform-disabled,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button.powerform-onload,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button:disabled {
+    opacity: .5;
+    -khtml-opacity: .5;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button.powerform-onload span,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button.powerform-onload span {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button.powerform-onload .powerform-icon-loader,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button.powerform-onload .powerform-icon-loader {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=material] .powerform-button:last-child,
+.powerform-ui.powerform-custom-form[data-design=material] .powerform-button:last-child {
+    margin-right: 0
+}

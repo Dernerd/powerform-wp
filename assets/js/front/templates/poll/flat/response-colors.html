@@ -1,0 +1,33 @@
+<?php if ( powerform_array_value_exists( $properties, 'poll-colors' ) ) { ?> .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-error, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-error {
+<?php if ( powerform_array_value_exists( $properties, 'error_background' ) && !empty( $properties['error_background'] ) ) { ?> background-color:
+<?php echo $properties['error_background'] ?>;
+<?php } else { ?> background-color: #F9E4E8;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'error_text' ) && !empty( $properties['error_text'] ) ) { ?> color:
+<?php echo $properties['error_text'] ?>;
+<?php } else { ?> color: #333333;
+<?php } ?> } .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-success, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-success {
+<?php if ( powerform_array_value_exists( $properties, 'success_background' ) && !empty( $properties['success_background'] ) ) { ?> background-color:
+<?php echo $properties['success_background'] ?>;
+<?php } else { ?> background-color: #BCEEE6;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'success_text' ) && !empty( $properties['success_text'] ) ) { ?> color:
+<?php echo $properties['success_text'] ?>;
+<?php } else { ?> color: #333333;
+<?php } ?> }
+
+<?php } else { ?> .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-error, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-error { background-color: #F9E4E8; color: #333333; } .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-success, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-response-message.powerform-success { background-color: #BCEEE6; color: #333333; }
+
+<?php } ?>

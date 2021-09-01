@@ -1,0 +1,99 @@
+<?php if ( powerform_array_value_exists( $properties, 'cform-color-settings' ) ) { ?> .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input:hover, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input:focus, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input:active {
+<?php if ( powerform_array_value_exists( $properties, 'input-bg' ) && !empty( $properties['input-bg'] ) ) { ?> background-color:
+<?php echo $properties['input-bg'] ?>;
+<?php } else { ?> background-color: #EDEDED;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'input-color' ) && !empty( $properties['input-color'] ) ) { ?> color:
+<?php echo $properties['input-color'] ?>;
+<?php } else { ?> color: #000000;
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input::placeholder {
+<?php if ( powerform_array_value_exists( $properties, 'input-placeholder' ) && !empty( $properties['input-placeholder'] ) ) { ?> color:
+<?php echo $properties['input-placeholder'] ?>;
+<?php } else { ?> color: #888888;
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input:-moz-placeholder {
+<?php if ( powerform_array_value_exists( $properties, 'input-placeholder' ) && !empty( $properties['input-placeholder'] ) ) { ?> color:
+<?php echo $properties['input-placeholder'] ?>;
+<?php } else { ?> color: #888888;
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input::-moz-placeholder {
+<?php if ( powerform_array_value_exists( $properties, 'input-placeholder' ) && !empty( $properties['input-placeholder'] ) ) { ?> color:
+<?php echo $properties['input-placeholder'] ?>;
+<?php } else { ?> color: #888888;
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input:-ms-input-placeholder {
+<?php if ( powerform_array_value_exists( $properties, 'input-placeholder' ) && !empty( $properties['input-placeholder'] ) ) { ?> color:
+<?php echo $properties['input-placeholder'] ?>;
+<?php } else { ?> color: #888888;
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input::-webkit-input-placeholder {
+<?php if ( powerform_array_value_exists( $properties, 'input-placeholder' ) && !empty( $properties['input-placeholder'] ) ) { ?> color:
+<?php echo $properties['input-placeholder'] ?>;
+<?php } else { ?> color: #888888;
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-is_hover .powerform-input {
+<?php if ( powerform_array_value_exists( $properties, 'input-hover-bg' ) && !empty( $properties['input-hover-bg'] ) ) { ?> background-color:
+<?php echo $properties['input-hover-bg'] ?>;
+<?php } else { ?> background-color: #E6E6E6;
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-is_active .powerform-input {
+<?php if ( powerform_array_value_exists( $properties, 'input-active-bg' ) && !empty( $properties['input-active-bg'] ) ) { ?> background-color:
+<?php echo $properties['input-active-bg'] ?>;
+<?php } else { ?> background-color: #E6E6E6;
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-has_error .powerform-input {
+<?php if ( powerform_array_value_exists( $properties, 'input-border-error' ) && !empty( $properties['input-border-error'] ) ) { ?> box-shadow: inset 2px 0 0 0
+<?php echo $properties['input-border-error'] ?>; -moz-box-shadow: inset 2px 0 0 0
+<?php echo $properties['input-border-error'] ?>; -webkit-box-shadow: inset 2px 0 0 0
+<?php echo $properties['input-border-error'] ?>;
+<?php } else { ?> box-shadow: inset 2px 0 0 0 #E04562; -moz-box-shadow: inset 2px 0 0 0 #E04562; -webkit-box-shadow: inset 2px 0 0 0 #E04562;
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input-with-icon [class*="powerform-icon-"] {
+<?php if ( powerform_array_value_exists( $properties, 'input-icon' ) && !empty( $properties['input-icon'] ) ) { ?> color:
+<?php echo $properties['input-icon'] ?>;
+<?php } else { ?> color: #777771;
+<?php } ?> }
+
+<?php } else { ?> .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input:hover, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input:focus, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input:active { background-color: #EDEDED; color: #000000; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input::placeholder { color: #888888; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input:-moz-placeholder { color: #888888; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input::-moz-placeholder { color: #888888; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input:-ms-input-placeholder { color: #888888; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input::-webkit-input-placeholder { color: #888888; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-is_hover .powerform-input { background-color: #E6E6E6; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-is_active .powerform-input { background-color: #E6E6E6; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-has_error .powerform-input { box-shadow: inset 2px 0 0 0 #E04562; -moz-box-shadow: inset 2px 0 0 0 #E04562; -webkit-box-shadow: inset 2px 0 0 0 #E04562; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-input-with-icon [class*="powerform-icon-"] { color: #777771; } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-is_active .powerform-input-with-icon [class*="powerform-icon-"] { color: #17A8E3; }
+
+<?php } ?>

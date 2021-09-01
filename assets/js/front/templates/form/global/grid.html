@@ -1,0 +1,62 @@
+<?php if ( powerform_array_value_exists( $properties, 'fields-style' ) && powerform_array_value_exists( $properties, 'spacing' ) ) { ?>
+
+	<?php if ( $properties['fields-style'] === "custom" && '' !== $properties['spacing'] ) { ?>
+
+		.powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-row:not(:last-child),
+		.et-db #et-boc .et_pb_module .powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-row:not(:last-child) {
+			margin-bottom: <?php echo $properties['spacing'] ?>px;
+		}
+
+		.powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col:not(:last-child),
+		.et-db #et-boc .et_pb_module .powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col:not(:last-child) {
+			margin-bottom: <?php echo $properties['spacing'] ?>px;
+		}
+
+		@media (min-width: 783px) {
+
+			.powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-row,
+			.et-db #et-boc .et_pb_module .powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-row {
+				display: flex;
+				flex-wrap: wrap;
+				margin-right: -<?php echo ($properties['spacing'] / 2) ?>px;
+				margin-left: -<?php echo ($properties['spacing'] / 2) ?>px;
+			}
+
+			.powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-row:not(:last-child),
+			.et-db #et-boc .et_pb_module .powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-row:not(:last-child) {
+				margin-bottom: <?php echo $properties['spacing'] ?>px;
+			}
+
+			.powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col,
+			.et-db #et-boc .et_pb_module .powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col {
+				min-width: 0;
+				flex: 1;
+				padding: 0 <?php echo ($properties['spacing'] / 2) ?>px;
+			}
+
+			.powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col:not(:last-child),
+			.et-db #et-boc .et_pb_module .powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col:not(:last-child) {
+				margin-bottom: 0;
+			}
+
+			.powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col-3 .powerform-row[data-multiple="true"],
+			.powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col-4 .powerform-row[data-multiple="true"],
+			.et-db #et-boc .et_pb_module .powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col-3 .powerform-row[data-multiple="true"],
+			.et-db #et-boc .et_pb_module .powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col-4 .powerform-row[data-multiple="true"] {
+				display: block;
+			}
+
+			.powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col-3 .powerform-row[data-multiple="true"] .powerform-col:not(:last-child),
+			.et-db #et-boc .et_pb_module .powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col-3 .powerform-row[data-multiple="true"] .powerform-col:not(:last-child) {
+				margin-bottom: <?php echo $properties['spacing'] ?>px;
+			}
+
+			.powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col-4 .powerform-row[data-multiple="true"] .powerform-col:not(:last-child),
+			.et-db #et-boc .et_pb_module .powerform-custom-form-<?php echo $properties['form_id'] ?>[data-grid="custom"] .powerform-col-4 .powerform-row[data-multiple="true"] .powerform-col:not(:last-child) {
+				margin-bottom: <?php echo $properties['spacing'] ?>px;
+			}
+		}
+
+	<?php } ?>
+
+<?php } ?>

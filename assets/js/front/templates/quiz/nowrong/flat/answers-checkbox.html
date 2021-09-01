@@ -1,0 +1,22 @@
+/* ELEMENT: Quiz Answers (Checkbox) */ .powerform-ui.powerform-quiz-
+<?php echo $properties['form_id'] ?> .powerform-answer .powerform-answer--status {
+<?php if ( powerform_array_value_exists( $properties, 'nowrong-toggle-palette' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'nowrong-answer-chkbg-static' ) ) { ?> background-color:
+<?php echo $properties['nowrong-answer-chkbg-static'] ?>;
+<?php } else { ?> background-color: #FFFFFF;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'nowrong-answer-chck-icon' ) ) { ?> color:
+<?php echo $properties['nowrong-answer-chck-icon'] ?>;
+<?php } else { ?> color: #FFFFFF;
+<?php } ?>
+<?php } else { ?> background-color: #FFFFFF; color: #FFFFFF;
+<?php } ?> } .powerform-ui.powerform-quiz-
+
+<?php echo $properties['form_id'] ?> .powerform-answer input:checked + .powerform-answer--design .powerform-answer--status {
+<?php if ( powerform_array_value_exists( $properties, 'nowrong-toggle-palette' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'nowrong-answer-chkbg-active' ) ) { ?> background-color:
+<?php echo $properties['nowrong-answer-chkbg-active'] ?>;
+<?php } else { ?> background-color: #17A8E3;
+<?php } ?>
+<?php } else { ?> background-color: #17A8E3;
+<?php } ?> }

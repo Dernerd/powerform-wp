@@ -1,0 +1,60 @@
+/* ELEMENT: Quiz Title */
+<?php if ( powerform_array_value_exists( $properties, 'hasLeads' ) && $properties['hasLeads'] ) { ?> #powerform-quiz-leads-
+<?php echo $properties['form_id'] ?>.powerform-ui .powerform-quiz--title {
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-toggle-palette' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-title-color' ) ) { ?> color:
+<?php echo $properties['knowledge-title-color'] ?>;
+<?php } else { ?> color: #000000;
+<?php } ?>
+<?php } else { ?> color: #000000;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-toggle-typography' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-title-font-size' ) ) { ?> font-size:
+<?php echo $properties['knowledge-title-font-size'] ?>px;
+<?php } else { ?> font-size: 36px;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-title-font-family' ) ) { ?>
+<?php if ( $properties['knowledge-title-font-family'] != 'custom' ) { ?> font-family:
+<?php echo $properties['knowledge-title-font-family'] ?>;
+<?php } else { ?>
+<?php if ( ! empty( $properties['knowledge-title-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-title-custom-family'] ?>;
+<?php } ?>
+<?php } ?>
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-title-font-weight' ) ) { ?>
+<?php powerform_echo_font_weight( $properties, 'knowledge-title-font-weight' ); ?>
+<?php } else { ?> font-weight: 700;
+<?php } ?>
+<?php } else { ?> font-size: 36px; font-weight: 700;
+<?php } ?> }
+<?php } else { ?> .powerform-ui.powerform-quiz-
+<?php echo $properties['form_id'] ?> .powerform-quiz--title {
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-toggle-palette' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-title-color' ) ) { ?> color:
+<?php echo $properties['knowledge-title-color'] ?>;
+<?php } else { ?> color: #000000;
+<?php } ?>
+<?php } else { ?> color: #000000;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-toggle-typography' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-title-font-size' ) ) { ?> font-size:
+<?php echo $properties['knowledge-title-font-size'] ?>px;
+<?php } else { ?> font-size: 36px;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-title-font-family' ) ) { ?>
+<?php if ( $properties['knowledge-title-font-family'] != 'custom' ) { ?> font-family:
+<?php echo $properties['knowledge-title-font-family'] ?>;
+<?php } else { ?>
+<?php if ( ! empty( $properties['knowledge-title-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-title-custom-family'] ?>;
+<?php } ?>
+<?php } ?>
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-title-font-weight' ) ) { ?>
+<?php powerform_echo_font_weight( $properties, 'knowledge-title-font-weight' ); ?>
+<?php } else { ?> font-weight: 700;
+<?php } ?>
+<?php } else { ?> font-size: 36px; font-weight: 700;
+<?php } ?> }
+<?php } ?>

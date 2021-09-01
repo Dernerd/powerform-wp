@@ -1,0 +1,19 @@
+<?php if ( powerform_array_value_exists( $properties, 'cform-color-settings' ) ) { ?> .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-error-message, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-error-message {
+<?php if ( powerform_array_value_exists( $properties, 'label-validation-background' ) && !empty( $properties['label-validation-background'] ) ) { ?> background-color:
+<?php echo $properties['label-validation-background'] ?>;
+<?php } else { ?> background-color: #F9E4E8;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'label-validation-color' ) && !empty( $properties['label-validation-color'] ) ) { ?> color:
+<?php echo $properties['label-validation-color'] ?>;
+<?php } else { ?> color: #E04562;
+<?php } ?> }
+
+<?php } else { ?> .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-error-message, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-error-message { background-color: #F9E4E8; color: #E04562; }
+
+<?php } ?>

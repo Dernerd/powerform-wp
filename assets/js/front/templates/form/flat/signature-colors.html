@@ -1,0 +1,47 @@
+<?php if ( powerform_array_value_exists( $properties, 'cform-color-settings' ) ) { ?> /* ==================== Signature Colors ==================== */ /* STATE: Default */ .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-signature, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-signature {
+<?php if ( powerform_array_value_exists( $properties, 'signature-background-default' ) && !empty( $properties['signature-background-default'] ) ) { ?> background-color:
+<?php echo $properties['signature-background-default'] ?> !important;
+<?php } else { ?> background-color: #EDEDED !important;
+<?php } ?> } .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-signature .powerform-signature--placeholder, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-signature .powerform-signature--placeholder {
+<?php if ( powerform_array_value_exists( $properties, 'signature-placeholder' ) && !empty( $properties['signature-placeholder'] ) ) { ?> color:
+<?php echo $properties['signature-placeholder'] ?>;
+<?php } else { ?> color: #888888;
+<?php } ?> } /* STATE: Hover */ .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-signature:hover, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-signature:hover {
+<?php if ( powerform_array_value_exists( $properties, 'signature-background-hover' ) && !empty( $properties['signature-background-hover'] ) ) { ?> background-color:
+<?php echo $properties['signature-background-hover'] ?> !important;
+<?php } else { ?> background-color: #E6E6E6 !important;
+<?php } ?> } /* STATE: Error */ .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-field-signature.powerform-has_error .powerform-signature, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-field-signature.powerform-has_error .powerform-signature {
+<?php if ( powerform_array_value_exists( $properties, 'signature-border-error' ) && !empty( $properties['signature-border-error'] ) ) { ?> box-shadow: inset 2px 0 0 0
+<?php echo $properties['signature-border-error'] ?>; -moz-box-shadow: inset 2px 0 0 0
+<?php echo $properties['signature-border-error'] ?>; -webkit-box-shadow: inset 2px 0 0 0
+<?php echo $properties['signature-border-error'] ?>;
+<?php } else { ?> box-shadow: inset 2px 0 0 0 #E04562; -moz-box-shadow: inset 2px 0 0 0 #E04562; -webkit-box-shadow: inset 2px 0 0 0 #E04562;
+<?php } ?> }
+
+<?php } else { ?> /* ==================== Signature Colors ==================== */ /* STATE: Default */ .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-signature, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-signature { background-color: #EDEDED !important; } .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-signature .powerform-signature--placeholder, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-signature .powerform-signature--placeholder { color: #888888; } /* STATE: Hover */ .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-signature:hover, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-signature:hover { background-color: #E6E6E6 !important; } /* STATE: Error */ .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-field-signature.powerform-has_error .powerform-signature, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-field-signature.powerform-has_error .powerform-signature { box-shadow: inset 2px 0 0 0 #E04562; -moz-box-shadow: inset 2px 0 0 0 #E04562; -webkit-box-shadow: inset 2px 0 0 0 #E04562; }
+
+<?php } ?>

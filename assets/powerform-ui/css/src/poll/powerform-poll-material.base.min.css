@@ -1,0 +1,580 @@
+/*!
+ * WPMU DEV Powerform UI
+ * Copyright 2019 Incsub (https://incsub.com)
+ * Licensed under GPL v3 (http://www.gnu.org/licenses/gpl-3.0.html)
+ */
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material],
+.powerform-ui.powerform-poll[data-design=material] {
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio input,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message.powerform-accessible,
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio input,
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message.powerform-accessible {
+    width: 1px!important;
+    height: 1px!important;
+    overflow: hidden!important;
+    position: absolute!important;
+    white-space: nowrap!important;
+    margin: -1px!important;
+    padding: 0!important;
+    border: 0!important;
+    clip: rect(0 0 0 0)!important;
+    -webkit-clip-path: inset(50%)!important;
+    clip-path: inset(50%)!important
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message.powerform-loading:before,
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message.powerform-loading:before {
+    speak: none;
+    line-height: 1;
+    font-family: powerform-icons-font!important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    letter-spacing: 0;
+    -webkit-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga" 1;
+    -webkit-font-variant-ligatures: discretionary-ligatures;
+    font-variant-ligatures: discretionary-ligatures;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes click-animation {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: .2;
+        -khtml-opacity: .2
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50%) scale(2);
+        transform: translate(-50%, -50%) scale(2);
+        opacity: .1;
+        -khtml-opacity: .1
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+        -khtml-opacity: 0
+    }
+}
+
+@keyframes click-animation {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: .2;
+        -khtml-opacity: .2
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50%) scale(2);
+        transform: translate(-50%, -50%) scale(2);
+        opacity: .1;
+        -khtml-opacity: .1
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+        -khtml-opacity: 0
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material],
+.powerform-ui.powerform-poll[data-design=material] {
+    width: 100%;
+    margin: 30px 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-poll-header+.powerform-poll-body,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-poll-header+.powerform-poll-footer,
+.powerform-ui.powerform-poll[data-design=material] .powerform-poll-header+.powerform-poll-body,
+.powerform-ui.powerform-poll[data-design=material] .powerform-poll-header+.powerform-poll-footer {
+    margin-top: 20px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-poll-body .powerform-field,
+.powerform-ui.powerform-poll[data-design=material] .powerform-poll-body .powerform-field {
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-poll-body .powerform-field:focus,
+.powerform-ui.powerform-poll[data-design=material] .powerform-poll-body .powerform-field:focus {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-poll-body+.powerform-poll-footer,
+.powerform-ui.powerform-poll[data-design=material] .powerform-poll-body+.powerform-poll-footer {
+    margin-top: 20px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material]:first-child,
+.powerform-ui.powerform-poll[data-design=material]:first-child {
+    margin-top: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material]:last-child,
+.powerform-ui.powerform-poll[data-design=material]:last-child {
+    margin-bottom: 0
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small) .powerform-poll-header+.powerform-poll-body,
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small) .powerform-poll-header+.powerform-poll-footer,
+    .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small) .powerform-poll-header+.powerform-poll-body,
+    .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small) .powerform-poll-header+.powerform-poll-footer {
+        margin-top: 30px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small) .powerform-poll-body+.powerform-poll-footer,
+    .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small) .powerform-poll-body+.powerform-poll-footer {
+        margin-top: 30px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small):first-child,
+    .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small):first-child {
+        margin-top: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small):last-child,
+    .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small):last-child {
+        margin-bottom: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small),
+    .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small) {
+        margin: 30px 0
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message,
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message {
+    margin: 0 0 20px;
+    padding: 15px 20px 15px 22px;
+    border-radius: 2px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, .3);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .3);
+    text-align: left
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message p,
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.3em;
+    letter-spacing: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message p:not(:last-child),
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message p:not(:last-child) {
+    margin-bottom: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message:active,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message:focus,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message:hover,
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message,
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message:active,
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message:focus,
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message:hover {
+    outline: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message:last-child,
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message:last-child {
+    margin-bottom: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message[aria-hidden=true],
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message[aria-hidden=true] {
+    display: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message.powerform-loading,
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message.powerform-loading {
+    position: relative;
+    padding-left: 46px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message.powerform-loading:before,
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message.powerform-loading:before {
+    content: "◌";
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    font-size: 16px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-response-message.powerform-show,
+.powerform-ui.powerform-poll[data-design=material] .powerform-response-message.powerform-show {
+    display: block
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small) .powerform-response-message:last-child,
+    .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small) .powerform-response-message:last-child {
+        margin-bottom: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small) .powerform-response-message,
+    .powerform-ui.powerform-poll[data-design=material]:not(.powerform-size--small) .powerform-response-message {
+        margin-bottom: 30px
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio,
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio {
+    cursor: default;
+    pointer-events: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    margin: 5px 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio input:checked:focus+span[aria-hidden]:after,
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio input:checked:focus+span[aria-hidden]:after {
+    -webkit-animation-name: click-animation;
+    animation-name: click-animation
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio input:checked+span[aria-hidden]:before,
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio input:checked+span[aria-hidden]:before {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio input:checked+span[aria-hidden]:after,
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio input:checked+span[aria-hidden]:after {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio span,
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio span {
+    cursor: pointer;
+    pointer-events: all;
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio span[aria-hidden],
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio span[aria-hidden] {
+    width: 20px;
+    height: 20px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20px;
+    flex: 0 0 20px;
+    position: relative;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 40px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio span[aria-hidden]:before,
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio span[aria-hidden]:before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    -khtml-opacity: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio span[aria-hidden]:after,
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio span[aria-hidden]:after {
+    content: " ";
+    opacity: 0;
+    -khtml-opacity: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio span[aria-hidden]+span,
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio span[aria-hidden]+span {
+    margin-left: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio span:not([aria-hidden]),
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio span:not([aria-hidden]) {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    line-height: 20px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio.powerform-radio-inline,
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio.powerform-radio-inline {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-bottom: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio.powerform-radio-inline:last-of-type,
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio.powerform-radio-inline:last-of-type {
+    margin-right: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio:not(.powerform-radio-inline):first-child,
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio:not(.powerform-radio-inline):first-child {
+    margin-top: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-radio:not(.powerform-radio-inline):last-child,
+.powerform-ui.powerform-poll[data-design=material] .powerform-radio:not(.powerform-radio-inline):last-child {
+    margin-bottom: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button {
+    width: auto;
+    min-width: 100px;
+    max-width: unset;
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    cursor: pointer;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin: 0 10px 0 0;
+    padding: 10px;
+    border: 0;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: unset;
+    line-height: 1.45em;
+    text-align: center;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button span,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button span {
+    display: block;
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button span[aria-hidden],
+.powerform-ui.powerform-poll[data-design=material] .powerform-button span[aria-hidden] {
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, .12);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: width 450ms cubic-bezier(.23, 1, .32, 1), .2s ease-out;
+    transition: width 450ms cubic-bezier(.23, 1, .32, 1), .2s ease-out
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button span:not([aria-hidden]),
+.powerform-ui.powerform-poll[data-design=material] .powerform-button span:not([aria-hidden]) {
+    position: relative;
+    z-index: 2
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button .powerform-icon-loader,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button .powerform-icon-loader {
+    opacity: 0;
+    -khtml-opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: .2s ease;
+    transition: .2s ease
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button .powerform-icon-loader:before,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button .powerform-icon-loader:before {
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button:active,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button:focus,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button:hover,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button:active,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button:focus,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button:hover {
+    outline: 0;
+    text-decoration: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button.powerform-disabled,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button.powerform-onload,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button:disabled,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button.powerform-disabled,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button.powerform-onload,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button:disabled {
+    opacity: .5;
+    -khtml-opacity: .5;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button.powerform-onload span,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button.powerform-onload span {
+    opacity: 0;
+    -khtml-opacity: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button.powerform-onload .powerform-icon-loader,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button.powerform-onload .powerform-icon-loader {
+    opacity: 1;
+    -khtml-opacity: 1
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-button:last-child,
+.powerform-ui.powerform-poll[data-design=material] .powerform-button:last-child {
+    margin-right: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-description,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-question,
+.powerform-ui.powerform-poll[data-design=material] .powerform-description,
+.powerform-ui.powerform-poll[data-design=material] .powerform-question {
+    display: block;
+    margin: 0 0 5px;
+    padding: 0;
+    border: 0;
+    letter-spacing: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-description:after,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-description:before,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-question:after,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-question:before,
+.powerform-ui.powerform-poll[data-design=material] .powerform-description:after,
+.powerform-ui.powerform-poll[data-design=material] .powerform-description:before,
+.powerform-ui.powerform-poll[data-design=material] .powerform-question:after,
+.powerform-ui.powerform-poll[data-design=material] .powerform-question:before {
+    content: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-description:last-child,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-question:last-child,
+.powerform-ui.powerform-poll[data-design=material] .powerform-description:last-child,
+.powerform-ui.powerform-poll[data-design=material] .powerform-question:last-child {
+    margin-bottom: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-question,
+.powerform-ui.powerform-poll[data-design=material] .powerform-question {
+    line-height: 1.6em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-description,
+.powerform-ui.powerform-poll[data-design=material] .powerform-description {
+    line-height: 1.6em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-image,
+.powerform-ui.powerform-poll[data-design=material] .powerform-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    position: relative;
+    margin: 10px auto
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-image:first-child,
+.powerform-ui.powerform-poll[data-design=material] .powerform-image:first-child {
+    margin-top: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-poll[data-design=material] .powerform-image:last-child,
+.powerform-ui.powerform-poll[data-design=material] .powerform-image:last-child {
+    margin-bottom: 0
+}

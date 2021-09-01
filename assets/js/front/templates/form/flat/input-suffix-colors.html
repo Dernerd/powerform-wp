@@ -1,0 +1,13 @@
+<?php if ( powerform_array_value_exists( $properties, 'cform-color-settings' ) ) { ?> .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-suffix {
+<?php if ( powerform_array_value_exists( $properties, 'suffix-color' ) && !empty( $properties['suffix-color'] ) ) { ?> color:
+<?php echo $properties['suffix-color'] ?>;
+<?php } else { ?> color: #000000;
+<?php } ?> }
+
+<?php } else { ?> .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-suffix { color: #000000; }
+
+<?php } ?>

@@ -1,0 +1,363 @@
+/*!
+ * WPMU DEV Powerform UI
+ * Copyright 2019 Incsub (https://incsub.com)
+ * Licensed under GPL v3 (http://www.gnu.org/licenses/gpl-3.0.html)
+ */
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content {
+    display: block
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content li,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content li:after,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content li:before,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content:after,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content:before,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content li:after,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content li:before,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content:after,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content:before {
+    content: unset
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content li,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content li {
+    display: none;
+    visibility: hidden
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content li:focus,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content li:focus {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content li.powerform-current,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-content li.powerform-current {
+    display: block;
+    visibility: visible
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-footer,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-footer {
+    display: block;
+    margin: 20px 0 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-footer .powerform-button,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-footer .powerform-button {
+    width: 100%;
+    display: block;
+    margin-right: 0;
+    margin-bottom: 20px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-footer .powerform-button:last-child,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-footer .powerform-button:last-child {
+    margin-bottom: 0
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-footer .powerform-button:last-child,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-footer .powerform-button:last-child {
+        margin-right: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-footer .powerform-button,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-footer .powerform-button {
+        width: auto;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        margin-right: 15px;
+        margin-bottom: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-footer,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin: 30px 0 0
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps {
+    display: block;
+    margin: 0 0 20px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-break,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-break {
+    width: 1px;
+    height: 24px;
+    display: block;
+    margin: 0 6px;
+    position: relative;
+    z-index: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-break:before,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-break:before {
+    content: " ";
+    width: 3px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    -webkit-transition: .2s linear;
+    transition: .2s linear
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-break:first-child,
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-break:last-child,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-break:first-child,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-break:last-child {
+    display: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-step,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-step {
+    height: 12px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-transform: none;
+    text-decoration: none
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-step .powerform-step-label,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-step .powerform-step-label {
+    overflow: hidden;
+    display: block;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    line-height: 1.6em;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-step .powerform-step-label+.powerform-step-dot,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-step .powerform-step-label+.powerform-step-dot {
+    margin-right: 5px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-step .powerform-step-dot,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-step .powerform-step-dot {
+    width: 12px;
+    height: 12px;
+    display: block;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 12px;
+    flex: 0 0 12px;
+    border-width: 0;
+    border-style: none;
+    border-radius: 24px;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: .2s linear;
+    transition: .2s linear
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-step.powerform-current~.powerform-break:before,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-step.powerform-current~.powerform-break:before {
+    height: 0
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-step.powerform-current~.powerform-step .powerform-step-dot,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-steps .powerform-step.powerform-current~.powerform-step .powerform-step-dot {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-break:before,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-break:before {
+        width: 100%;
+        height: 3px;
+        top: -1px;
+        left: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-break:first-child,
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-break:last-child,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-break:first-child,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-break:last-child {
+        display: block
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-break,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-break {
+        width: auto;
+        height: 1px;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        margin: 6px 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-step .powerform-step-label+.powerform-step-dot,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-step .powerform-step-label+.powerform-step-dot {
+        margin-top: 5px;
+        margin-right: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-step .powerform-step-label,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-step .powerform-step-label {
+        overflow: unset;
+        text-align: center;
+        text-overflow: unset;
+        white-space: normal;
+        word-break: normal
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-step.powerform-current~.powerform-break:before,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-step.powerform-current~.powerform-break:before {
+        width: 0
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-step,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps .powerform-step {
+        width: 12px;
+        height: auto;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+        justify-content: unset
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-steps {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        margin-bottom: 30px
+    }
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-progress,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-progress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 0 20px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-progress .powerform-progress-label,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-progress .powerform-progress-label {
+    display: block;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    line-height: 2.2em
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-progress .powerform-progress-label+.powerform-progress-bar,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-progress .powerform-progress-label+.powerform-progress-bar {
+    margin-left: 10px
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-progress .powerform-progress-bar,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-progress .powerform-progress-bar {
+    height: 8px;
+    overflow: hidden;
+    display: block;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-progress .powerform-progress-bar span,
+.powerform-ui.powerform-custom-form[data-design=flat] .powerform-pagination-progress .powerform-progress-bar span {
+    height: 8px;
+    display: block
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-progress .powerform-progress-label+.powerform-progress-bar,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-progress .powerform-progress-label+.powerform-progress-bar {
+        margin-left: 15px
+    }
+}
+
+@media (min-width:783px) {
+    .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-progress,
+    .powerform-ui.powerform-custom-form[data-design=flat]:not(.powerform-size--small) .powerform-pagination-progress {
+        margin-bottom: 30px
+    }
+}

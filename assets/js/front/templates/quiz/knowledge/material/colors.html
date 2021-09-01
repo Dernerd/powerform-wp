@@ -1,0 +1,221 @@
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-toggle-palette' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-title-color' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title { color:
+<?php echo $properties['knowledge-title-color'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title { color: #333333; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-description-color' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description { color:
+<?php echo $properties['knowledge-description-color'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description { color: #8C8C8C; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-question-color' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend { color:
+<?php echo $properties['knowledge-question-color'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend { color: #333333; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-background-static' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--design { background-color:
+<?php echo $properties['knowledge-answer-background-static'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--design { background-color: #FAFAFA; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-background-hover' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--design:hover { background-color:
+<?php echo $properties['knowledge-answer-background-hover'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--design:hover { background-color: #F3FBFE; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-background-active' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer input:checked + .powerform-answer--design { background-color:
+<?php echo $properties['knowledge-answer-background-active'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer input:checked + .powerform-answer--design { background-color: #F3FBFE; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-aright-background' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_correct input:checked + .powerform-answer--design { background-color:
+<?php echo $properties['knowledge-aright-background'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_correct input:checked + .powerform-answer--design { background-color: #F4FCF2; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-awrong-background' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_incorrect input:checked + .powerform-answer--design { background-color:
+<?php echo $properties['knowledge-awrong-background'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_incorrect input:checked + .powerform-answer--design { background-color: #FDF2F2; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-color-static' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--name { color:
+<?php echo $properties['knowledge-answer-color-static'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--name { color: #888888; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-color-active' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer input:checked + span .powerform-answer--name { color:
+<?php echo $properties['knowledge-answer-color-active'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer input:checked + span .powerform-answer--name { color: #333333; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-aright-color' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_correct input:checked + span .powerform-answer--name { color:
+<?php echo $properties['knowledge-aright-color'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_correct input:checked + span .powerform-answer--name { color: #0BC30B; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-awrong-color' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_incorrect input:checked + span .powerform-answer--name { color:
+<?php echo $properties['knowledge-awrong-color'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_incorrect input:checked + span .powerform-answer--name { color: #DA0000; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-check-border-static' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--status { border-color:
+<?php echo $properties['knowledge-answer-check-border-static'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--status { border-color: #EBEDEB; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-check-border-active' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer input:checked + span .powerform-answer--status { border-color:
+<?php echo $properties['knowledge-answer-check-border-active'] ?>; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer input:checked + span .powerform-answer--status:before { background-color:
+<?php echo $properties['knowledge-answer-check-border-active'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer input:checked + span .powerform-answer--status { border-color: #17A8E3; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer input:checked + span .powerform-answer--status:before { background-color: #17A8E3; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-check-border-correct' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_correct input:checked + span .powerform-answer--status { border-color:
+<?php echo $properties['knowledge-answer-check-border-correct'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_correct input:checked + span .powerform-answer--status { border-color: #0BC30B; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-check-border-incorrect' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_incorrect input:checked + span .powerform-answer--status { border-color:
+<?php echo $properties['knowledge-answer-check-border-incorrect'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_incorrect input:checked + span .powerform-answer--status { border-color: #DA0000; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-icon-correct' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_correct .powerform-answer--status:after { color:
+<?php echo $properties['knowledge-answer-icon-correct'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_correct .powerform-answer--status:after { color: #0BC30B; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-answer-icon-incorrect' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_incorrect .powerform-answer--status:after { color:
+<?php echo $properties['knowledge-answer-icon-incorrect'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_incorrect .powerform-answer--status:after { color: #DA0000; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-phrasing-color' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question--result span { color:
+<?php echo $properties['knowledge-phrasing-color'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question--result span { color: #4D4D4D; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-submit-background-static' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button { background-color:
+<?php echo $properties['knowledge-submit-background-static'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button { background-color: #17A8E3; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-submit-background-hover' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button:hover { background-color:
+<?php echo $properties['knowledge-submit-background-hover'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button:hover { background-color: #008FCA; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-submit-background-active' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button:active { background-color:
+<?php echo $properties['knowledge-submit-background-active'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button:active { background-color: #008FCA; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-submit-color-static' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button { color:
+<?php echo $properties['knowledge-submit-color-active'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button { color: #FFFFFF; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-submit-color-hover' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button:hover { color:
+<?php echo $properties['knowledge-submit-color-hover'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button:hover { color: #FFFFFF; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-submit-color-active' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button:active { color:
+<?php echo $properties['knowledge-submit-color-active'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button:active { color: #FFFFFF; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-summary-color' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary * { color:
+<?php echo $properties['knowledge-summary-color'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary * { color: #333333; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-sshare-color' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--text { color:
+<?php echo $properties['knowledge-sshare-color'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--text { color: #4D4D4D; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-social-facebook' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon .wpdui-icon-social-facebook { color:
+<?php echo $properties['knowledge-social-facebook'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon .wpdui-icon-social-facebook { color: #0084BF; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-social-twitter' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon .wpdui-icon-social-twitter { color:
+<?php echo $properties['knowledge-social-twitter'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon .wpdui-icon-social-twitter { color: #1DA1F2; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-social-google' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon .wpdui-icon-social-google-plus { color:
+<?php echo $properties['knowledge-social-google'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon .wpdui-icon-social-google-plus { color: #DB4437; }
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-social-linkedin' ) ) { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon .wpdui-icon-social-linkedin { color:
+<?php echo $properties['knowledge-social-linkedin'] ?>; }
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon .wpdui-icon-social-linkedin { color: #0084BF; }
+<?php } ?>
+<?php } else { ?> .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--title { color: #333333; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--description { color: #8C8C8C; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question legend { color: #333333; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--design { background-color: #FAFAFA; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--design:hover { background-color: #F3FBFE; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer input:checked + .powerform-answer--design { background-color: #F3FBFE; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_correct input:checked + .powerform-answer--design { background-color: #F4FCF2; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_incorrect input:checked + .powerform-answer--design { background-color: #FDF2F2; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--status { border-color: #EBEDEB; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer input:checked + span .powerform-answer--status { border-color: #17A8E3; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer input:checked + span .powerform-answer--status:before { background-color: #17A8E3; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_correct input:checked + span .powerform-answer--status { border-color: #0BC30B; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_incorrect input:checked + span .powerform-answer--status { border-color: #DA0000; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_correct .powerform-answer--status:after { color: #0BC30B; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_incorrect .powerform-answer--status:after { color: #DA0000; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer .powerform-answer--name { color: #888888; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer input:checked + span .powerform-answer--name { color: #333333; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_correct input:checked + span .powerform-answer--name { color: #0BC30B; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-answer.powerform-is_incorrect input:checked + span .powerform-answer--name { color: #DA0000; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-question--result span { color: #4D4D4D; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button { background-color: #17A8E3; color: #FFFFFF; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button:hover { background-color: #008FCA; color: #FFFFFF; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-button:active { background-color: #008FCA; color: #FFFFFF; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-quiz--summary * { color: #333333; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--text { color: #4D4D4D; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon .wpdui-icon-social-facebook { color: #0084BF; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon .wpdui-icon-social-twitter { color: #1DA1F2; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon .wpdui-icon-social-google-plus { color: #DB4437; } .powerform-quiz-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-social--icon .wpdui-icon-social-linkedin { color: #0084BF; }
+<?php } ?>

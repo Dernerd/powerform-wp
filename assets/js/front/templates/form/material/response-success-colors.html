@@ -1,0 +1,41 @@
+<?php if ( powerform_array_value_exists( $properties, 'cform-color-settings' ) ) { ?> .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-response-message.powerform-success {
+<?php if ( powerform_array_value_exists( $properties, 'response-success-border' ) && !empty( $properties['response-success-border'] ) ) { ?> box-shadow: inset 4px 0 0 0
+<?php echo $properties['response-success-border'] ?>, 1px 1px 4px 0 rgba(0,0,0,0.3); -moz-box-shadow: inset 4px 0 0 0
+<?php echo $properties['response-success-border'] ?>, 1px 1px 4px 0 rgba(0,0,0,0.3); -webkit-box-shadow: inset 4px 0 0 0
+<?php echo $properties['response-success-border'] ?>, 1px 1px 4px 0 rgba(0,0,0,0.3);
+<?php } else { ?> box-shadow: inset 4px 0 0 0 #1ABCA1, 1px 1px 4px 0 rgba(0,0,0,0.3); -moz-box-shadow: inset 4px 0 0 0 #1ABCA1, 1px 1px 4px 0 rgba(0,0,0,0.3); -webkit-box-shadow: inset 4px 0 0 0 #1ABCA1, 1px 1px 4px 0 rgba(0,0,0,0.3);
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-response-message.powerform-success:hover, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-response-message.powerform-success:focus, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-response-message.powerform-success:active {
+<?php if ( powerform_array_value_exists( $properties, 'response-success-border' ) && !empty( $properties['response-success-border'] ) ) { ?> box-shadow: inset 4px 0 0 0
+<?php echo $properties['response-success-border'] ?>, 1px 1px 4px 0 rgba(0,0,0,0.3); -moz-box-shadow: inset 4px 0 0 0
+<?php echo $properties['response-success-border'] ?>, 1px 1px 4px 0 rgba(0,0,0,0.3); -webkit-box-shadow: inset 4px 0 0 0
+<?php echo $properties['response-success-border'] ?>, 1px 1px 4px 0 rgba(0,0,0,0.3);
+<?php } else { ?> box-shadow: inset 4px 0 0 0 #1ABCA1, 1px 1px 4px 0 rgba(0,0,0,0.3); -moz-box-shadow: inset 4px 0 0 0 #1ABCA1, 1px 1px 4px 0 rgba(0,0,0,0.3); -webkit-box-shadow: inset 4px 0 0 0 #1ABCA1, 1px 1px 4px 0 rgba(0,0,0,0.3);
+<?php } ?> } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-response-message.powerform-success, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-response-message.powerform-success p {
+<?php if ( powerform_array_value_exists( $properties, 'response-success-color' ) && !empty( $properties['response-success-color'] ) ) { ?> color:
+<?php echo $properties['response-success-color'] ?>;
+<?php } else { ?> color: #333333;
+<?php } ?> }
+
+<?php } else { ?> .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-response-message.powerform-success { box-shadow: inset 4px 0 0 0 #1ABCA1, 1px 1px 4px 0 rgba(0,0,0,0.3); -moz-box-shadow: inset 4px 0 0 0 #1ABCA1, 1px 1px 4px 0 rgba(0,0,0,0.3); -webkit-box-shadow: inset 4px 0 0
+0 #1ABCA1, 1px 1px 4px 0 rgba(0,0,0,0.3); } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-response-message.powerform-success:hover, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-response-message.powerform-success:focus, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-response-message.powerform-success:active { box-shadow: inset 4px 0 0 0 #1ABCA1, 1px 1px 4px 0 rgba(0,0,0,0.3); -moz-box-shadow: inset 4px 0 0 0 #1ABCA1, 1px 1px 4px 0 rgba(0,0,0,0.3); -webkit-box-shadow: inset 4px
+0 0 0 #1ABCA1, 1px 1px 4px 0 rgba(0,0,0,0.3); } .powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-response-message.powerform-success, .powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--material .powerform-response-message.powerform-success p { color: #333333; }
+
+<?php } ?>

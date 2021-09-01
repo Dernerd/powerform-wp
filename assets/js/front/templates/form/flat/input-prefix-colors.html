@@ -1,0 +1,15 @@
+<?php if ( powerform_array_value_exists( $properties, 'cform-color-settings' ) ) { ?> .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-prefix, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-prefix {
+<?php if ( powerform_array_value_exists( $properties, 'prefix-color' ) && !empty( $properties['prefix-color'] ) ) { ?> color:
+<?php echo $properties['prefix-color'] ?>;
+<?php } else { ?> color: #000000;
+<?php } ?> }
+
+<?php } else { ?> .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-prefix, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-prefix { color: #000000; }
+
+<?php } ?>

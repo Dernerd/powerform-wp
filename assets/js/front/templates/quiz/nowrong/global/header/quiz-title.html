@@ -1,0 +1,29 @@
+/* ELEMENT: Quiz Title */ .powerform-ui.powerform-quiz-
+<?php echo $properties['form_id'] ?> .powerform-quiz--title {
+<?php if ( powerform_array_value_exists( $properties, 'nowrong-toggle-palette' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'nowrong-title-color' ) ) { ?> color:
+<?php echo $properties['nowrong-title-color'] ?>;
+<?php } else { ?> color: #000000;
+<?php } ?>
+<?php } else { ?> color: #000000;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'nowrong-toggle-typography' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'nowrong-title-font-size' ) ) { ?> font-size:
+<?php echo $properties['nowrong-title-font-size'] ?>px;
+<?php } else { ?> font-size: 36px;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'nowrong-title-font-family' ) ) { ?>
+<?php if ( $properties['nowrong-title-font-family'] != 'custom' ) { ?> font-family:
+<?php echo $properties['nowrong-title-font-family'] ?>;
+<?php } else { ?>
+<?php if ( ! empty( $properties['nowrong-title-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['nowrong-title-custom-family'] ?>;
+<?php } ?>
+<?php } ?>
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'nowrong-title-font-weight' ) ) { ?>
+<?php powerform_echo_font_weight( $properties, 'nowrong-title-font-weight' ); ?>
+<?php } else { ?> font-weight: 700;
+<?php } ?>
+<?php } else { ?> font-size: 36px; font-weight: 700;
+<?php } ?> }

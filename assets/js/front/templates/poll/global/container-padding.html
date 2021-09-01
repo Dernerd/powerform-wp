@@ -1,0 +1,25 @@
+<?php if ( powerform_array_value_exists( $properties, 'poll-padding' ) ) { ?> .powerform-ui.powerform-poll.powerform-poll-
+
+<?php echo $properties['form_id'] ?> {
+<?php if ( powerform_array_value_exists( $properties, 'powerform-poll-padding-top' ) ) { ?> padding-top:
+<?php echo $properties['powerform-poll-padding-top'] ?>px;
+<?php } else { ?> padding-top: 0;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'powerform-poll-padding-right' ) ) { ?> padding-right:
+<?php echo $properties['powerform-poll-padding-right'] ?>px;
+<?php } else { ?> padding-right: 0;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'powerform-poll-padding-bottom' ) ) { ?> padding-bottom:
+<?php echo $properties['powerform-poll-padding-bottom'] ?>px;
+<?php } else { ?> padding-bottom: 0;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'powerform-poll-padding-left' ) ) { ?> padding-left:
+<?php echo $properties['powerform-poll-padding-left'] ?>px;
+<?php } else { ?> padding-left: 0;
+<?php } ?> }
+
+<?php } else { ?> .powerform-ui.powerform-poll.powerform-poll-
+
+<?php echo $properties['form_id'] ?> { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; }
+
+<?php } ?>

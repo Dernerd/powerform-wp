@@ -1,0 +1,30 @@
+/*!
+ * WPMU DEV Powerform UI
+ * Copyright 2019 Incsub (https://incsub.com)
+ * Licensed under GPL v3 (http://www.gnu.org/licenses/gpl-3.0.html)
+ */
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-screen-reader-only,
+.powerform-ui .powerform-screen-reader-only {
+    width: 1px!important;
+    height: 1px!important;
+    overflow: hidden!important;
+    position: absolute!important;
+    white-space: nowrap!important;
+    margin: -1px!important;
+    padding: 0!important;
+    border: 0!important;
+    clip: rect(0 0 0 0)!important;
+    -webkit-clip-path: inset(50%)!important;
+    clip-path: inset(50%)!important
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-hidden,
+.powerform-ui .powerform-hidden {
+    display: none!important
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui fieldset,
+.powerform-ui fieldset {
+    line-height: 1
+}

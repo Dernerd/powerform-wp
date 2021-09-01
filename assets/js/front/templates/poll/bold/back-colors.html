@@ -1,0 +1,47 @@
+<?php if ( powerform_array_value_exists( $properties, 'poll-colors' ) ) { ?> .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-button-back, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-button-back {
+<?php if ( powerform_array_value_exists( $properties, 'buttonbg' ) ) { ?> background-color:
+<?php echo $properties['buttonbg'] ?>;
+<?php } else { ?> background-color: #17A8E3;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'buttontxt' ) ) { ?> color:
+<?php echo $properties['buttontxt'] ?>;
+<?php } else { ?> color: #FFFFFF;
+<?php } ?> } .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-button-back:hover, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-button-back:hover {
+<?php if ( powerform_array_value_exists( $properties, 'buttonbg_hover' ) ) { ?> background-color:
+<?php echo $properties['buttonbg_hover'] ?>;
+<?php } else { ?> background-color: #008FCA;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'buttontxt_hover' ) ) { ?> color:
+<?php echo $properties['buttontxt_hover'] ?>;
+<?php } else { ?> color: #FFFFFF;
+<?php } ?> } .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-button-back:active, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-button-back:active {
+<?php if ( powerform_array_value_exists( $properties, 'buttonbg_active' ) ) { ?> background-color:
+<?php echo $properties['buttonbg_active'] ?>;
+<?php } else { ?> background-color: #008FCA;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'buttontxt_active' ) ) { ?> color:
+<?php echo $properties['buttontxt_active'] ?>;
+<?php } else { ?> color: #FFFFFF;
+<?php } ?> }
+
+<?php } else { ?> .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-button-back, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-button-back { background-color: #17A8E3; color: #FFFFFF; } .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-button-back:hover, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-button-back:hover { background-color: #008FCA; color: #FFFFFF; } .powerform-ui.powerform-poll-
+
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-button-back:active, .et-db #et-boc .et_pb_module .powerform-ui.powerform-poll-
+<?php echo $properties['form_id'] ?>.powerform-design--bold .powerform-button-back:active { background-color: #008FCA; color: #FFFFFF; }
+
+<?php } ?>

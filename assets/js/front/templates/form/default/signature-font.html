@@ -1,0 +1,48 @@
+<?php if ( powerform_array_value_exists( $properties, 'form-font-family' ) ) { ?>
+
+	/*
+	====================
+	Signature Font Styles
+	====================
+	*/
+
+	/* STATE: Default */
+
+	.powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-signature .powerform-signature--placeholder,
+	.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-signature .powerform-signature--placeholder {
+		<?php if ( powerform_array_value_exists( $properties, 'cform-esign-placeholder-font-size' ) ) { ?>
+			font-size: <?php echo $properties['cform-esign-placeholder-font-size'] ?>px;
+		<?php } else { ?>
+			font-size: 16px;
+		<?php } ?>
+		<?php if ( powerform_array_value_exists( $properties, 'cform-esign-placeholder-font-family' ) ) { ?>
+			<?php if ( $properties['cform-esign-placeholder-font-family'] != 'custom' && !empty( $properties['cform-esign-placeholder-font-family'] ) ) { ?>
+				font-family: <?php echo $properties['cform-esign-placeholder-font-family'] ?>;
+			<?php } else if ( $properties['cform-esign-placeholder-font-family'] == 'custom' && !empty( $properties['cform-esign-placeholder-custom-family'] ) ) { ?>
+				font-family: <?php echo $properties['cform-esign-placeholder-custom-family'] ?>;
+			<?php } ?>
+		<?php } ?>
+		<?php if ( powerform_array_value_exists( $properties, 'cform-esign-placeholder-font-weight' ) ) { ?>
+			<?php powerform_echo_font_weight( $properties, 'cform-esign-placeholder-font-weight' ); ?>
+		<?php } else { ?>
+			font-weight: 400;
+		<?php } ?>
+	}
+
+<?php } else { ?>
+
+	/*
+	====================
+	Signature Font Styles
+	====================
+	*/
+
+	/* STATE: Default */
+
+	.powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-signature .powerform-signature--placeholder,
+	.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-signature .powerform-signature--placeholder {
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+<?php } ?>

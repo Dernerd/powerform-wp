@@ -1,0 +1,189 @@
+/*!
+ * WPMU DEV Powerform UI
+ * Copyright 2019 Incsub (https://incsub.com)
+ * Licensed under GPL v3 (http://www.gnu.org/licenses/gpl-3.0.html)
+ */
+
+.et-db #et-boc .et_pb_module .powerform-ui [class*=powerform-icon-]:before,
+.et-db #et-boc .et_pb_module .powerform-ui [class^=powerform-icon-]:before,
+.powerform-ui [class*=powerform-icon-]:before,
+.powerform-ui [class^=powerform-icon-]:before {
+    speak: none;
+    line-height: 1;
+    font-family: powerform-icons-font!important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    letter-spacing: 0;
+    -webkit-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga" 1;
+    -webkit-font-variant-ligatures: discretionary-ligatures;
+    font-variant-ligatures: discretionary-ligatures;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes click-animation {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: .2;
+        -khtml-opacity: .2
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50%) scale(2);
+        transform: translate(-50%, -50%) scale(2);
+        opacity: .1;
+        -khtml-opacity: .1
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+        -khtml-opacity: 0
+    }
+}
+
+@keyframes click-animation {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: .2;
+        -khtml-opacity: .2
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50%) scale(2);
+        transform: translate(-50%, -50%) scale(2);
+        opacity: .1;
+        -khtml-opacity: .1
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+        -khtml-opacity: 0
+    }
+}
+
+@font-face {
+    font-family: powerform-icons-font;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(../fonts/powerform-icons-font.eot?1.7.4);
+    src: local("powerform-icons-font"), url(../fonts/powerform-icons-font.eot?1.7.4#iefix) format("embedded-opentype"), url(../fonts/powerform-icons-font.woff2?1.7.4) format("woff2"), url(../fonts/powerform-icons-font.woff?1.7.4) format("woff"), url(../fonts/powerform-icons-font.ttf?1.7.4) format("truetype"), url(../fonts/powerform-icons-font.svg?1.7.4#powerform-icons-font) format("svg")
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-loading:before,
+.powerform-ui .powerform-loading:before {
+    -webkit-animation: spin 1.3s linear infinite;
+    animation: spin 1.3s linear infinite
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-calendar:before,
+.powerform-ui .powerform-icon-calendar:before {
+    content: "📅"
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-cancel:before,
+.powerform-ui .powerform-icon-cancel:before {
+    content: "✕"
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-check:before,
+.powerform-ui .powerform-icon-check:before {
+    content: "✓"
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-chevron-down:before,
+.powerform-ui .powerform-icon-chevron-down:before {
+    content: "⌄"
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-chevron-left:before,
+.powerform-ui .powerform-icon-chevron-left:before {
+    content: "❮"
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-chevron-right:before,
+.powerform-ui .powerform-icon-chevron-right:before {
+    content: "❯"
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-chevron-up:before,
+.powerform-ui .powerform-icon-chevron-up:before {
+    content: "⌃"
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-close:before,
+.powerform-ui .powerform-icon-close:before {
+    content: "⊗"
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-file:before,
+.powerform-ui .powerform-icon-file:before {
+    content: "📄"
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-loader:before,
+.powerform-ui .powerform-icon-loader:before {
+    content: "◌"
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-refresh:before,
+.powerform-ui .powerform-icon-refresh:before {
+    content: "⟳"
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-reset:before,
+.powerform-ui .powerform-icon-reset:before {
+    content: "⥁"
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-social-facebook:before,
+.powerform-ui .powerform-icon-social-facebook:before {
+    content: ""
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-social-linkedin:before,
+.powerform-ui .powerform-icon-social-linkedin:before {
+    content: ""
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-social-twitter:before,
+.powerform-ui .powerform-icon-social-twitter:before {
+    content: ""
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-upload:before,
+.powerform-ui .powerform-icon-upload:before {
+    content: "⊼"
+}
+
+.et-db #et-boc .et_pb_module .powerform-ui .powerform-icon-warning:before,
+.powerform-ui .powerform-icon-warning:before {
+    content: "⚠"
+}

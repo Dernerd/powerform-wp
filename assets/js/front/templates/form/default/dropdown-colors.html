@@ -1,0 +1,71 @@
+<?php if ( powerform_array_value_exists( $properties, 'cform-color-settings' ) ) { ?>
+
+	.powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-select-container .powerform-select-list .powerform-dropdown-list,
+	.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-select-container .powerform-select-list .powerform-dropdown-list {
+		<?php if ( powerform_array_value_exists( $properties, 'dropdown-border' ) && !empty( $properties['dropdown-border'] ) ) { ?>
+			border-color: <?php echo $properties['dropdown-border'] ?>;
+		<?php } else { ?>
+			border-color: #17A8E3;
+		<?php } ?>
+		<?php if ( powerform_array_value_exists( $properties, 'dropdown-background' ) && !empty( $properties['dropdown-background'] ) ) { ?>
+			background-color: <?php echo $properties['dropdown-background'] ?>;
+		<?php } else { ?>
+			background-color: #E6E6E6;
+		<?php } ?>
+		<?php if ( powerform_array_value_exists( $properties, 'dropdown-option-color-static' ) && !empty( $properties['dropdown-option-color-static'] ) ) { ?>
+			color: <?php echo $properties['dropdown-option-color-static'] ?>;
+		<?php } else { ?>
+			color: #777771;
+		<?php } ?>
+	}
+
+	.powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-select-container .powerform-select-list .powerform-dropdown-list li:hover,
+	.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-select-container .powerform-select-list .powerform-dropdown-list li:hover {
+		<?php if ( powerform_array_value_exists( $properties, 'dropdown-option-background-hover' ) && !empty( $properties['dropdown-option-background-hover'] ) ) { ?>
+			background-color: <?php echo $properties['dropdown-option-background-hover'] ?>;
+		<?php } else { ?>
+			background-color: #DDDDDD;
+		<?php } ?>
+		<?php if ( powerform_array_value_exists( $properties, 'dropdown-option-color-hover' ) && !empty( $properties['dropdown-option-color-hover'] ) ) { ?>
+			color: <?php echo $properties['dropdown-option-color-hover'] ?>;
+		<?php } else { ?>
+			color: #000000;
+		<?php } ?>
+	}
+
+	.powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-select-container .powerform-select-list .powerform-dropdown-list li.current,
+	.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-select-container .powerform-select-list .powerform-dropdown-list li.current {
+		<?php if ( powerform_array_value_exists( $properties, 'dropdown-option-background-active' ) && !empty( $properties['dropdown-option-background-active'] ) ) { ?>
+			background-color: <?php echo $properties['dropdown-option-background-active'] ?>;
+		<?php } else { ?>
+			background-color: #17A8E3;
+		<?php } ?>
+		<?php if ( powerform_array_value_exists( $properties, 'dropdown-option-color-active' ) && !empty( $properties['dropdown-option-color-active'] ) ) { ?>
+			color: <?php echo $properties['dropdown-option-color-active'] ?>;
+		<?php } else { ?>
+			color: #FFFFFF;
+		<?php } ?>
+	}
+
+<?php } else { ?>
+
+	.powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-select-container .powerform-select-list .powerform-dropdown-list,
+	.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-select-container .powerform-select-list .powerform-dropdown-list {
+		border-color: #17A8E3;
+		background-color: #E6E6E6;
+		color: #777771;
+	}
+
+	.powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-select-container .powerform-select-list .powerform-dropdown-list li:hover,
+	.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-select-container .powerform-select-list .powerform-dropdown-list li:hover {
+		background-color: #DDDDDD;
+		color: #000000;
+	}
+
+	.powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-select-container .powerform-select-list .powerform-dropdown-list li.current,
+	.et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-<?php echo $properties['form_id'] ?>.powerform-design--default .powerform-select-container .powerform-select-list .powerform-dropdown-list li.current {
+		background-color: #17A8E3;
+		color: #FFFFFF;
+	}
+
+<?php } ?>

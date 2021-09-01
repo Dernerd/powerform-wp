@@ -1,0 +1,62 @@
+/* ELEMENT: Quiz Description */
+<?php if ( powerform_array_value_exists( $properties, 'hasLeads' ) && $properties['hasLeads'] ) { ?> #powerform-quiz-leads-
+<?php echo $properties['form_id'] ?>.powerform-ui .powerform-quiz--description, #powerform-quiz-leads-
+<?php echo $properties['form_id'] ?>.powerform-ui .powerform-quiz--description p {
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-toggle-palette' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-description-color' ) ) { ?> color:
+<?php echo $properties['knowledge-description-color'] ?>;
+<?php } else { ?> color: #000000;
+<?php } ?>
+<?php } else { ?> color: #000000;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-toggle-typography' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-description-font-size' ) ) { ?> font-size:
+<?php echo $properties['knowledge-description-font-size'] ?>px;
+<?php } else { ?> font-size: 16px;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-description-font-family' ) ) { ?>
+<?php if ( $properties['knowledge-description-font-family'] != 'custom' ) { ?> font-family:
+<?php echo $properties['knowledge-description-font-family'] ?>;
+<?php } else { ?>
+<?php if ( ! empty( $properties['knowledge-description-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-description-custom-family'] ?>;
+<?php } ?>
+<?php } ?>
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-description-font-weight' ) ) { ?>
+<?php powerform_echo_font_weight( $properties, 'knowledge-description-font-weight' ); ?>
+<?php } else { ?> font-weight: 400;
+<?php } ?>
+<?php } else { ?> font-size: 16px; font-weight: 400;
+<?php } ?> }
+<?php } else { ?> .powerform-ui.powerform-quiz-
+<?php echo $properties['form_id'] ?> .powerform-quiz--description, .powerform-ui.powerform-quiz-
+<?php echo $properties['form_id'] ?> .powerform-quiz--description p {
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-toggle-palette' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-description-color' ) ) { ?> color:
+<?php echo $properties['knowledge-description-color'] ?>;
+<?php } else { ?> color: #000000;
+<?php } ?>
+<?php } else { ?> color: #000000;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-toggle-typography' ) ) { ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-description-font-size' ) ) { ?> font-size:
+<?php echo $properties['knowledge-description-font-size'] ?>px;
+<?php } else { ?> font-size: 16px;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-description-font-family' ) ) { ?>
+<?php if ( $properties['knowledge-description-font-family'] != 'custom' ) { ?> font-family:
+<?php echo $properties['knowledge-description-font-family'] ?>;
+<?php } else { ?>
+<?php if ( ! empty( $properties['knowledge-description-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['knowledge-description-custom-family'] ?>;
+<?php } ?>
+<?php } ?>
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'knowledge-description-font-weight' ) ) { ?>
+<?php powerform_echo_font_weight( $properties, 'knowledge-description-font-weight' ); ?>
+<?php } else { ?> font-weight: 400;
+<?php } ?>
+<?php } else { ?> font-size: 16px; font-weight: 400;
+<?php } ?> }
+<?php } ?>

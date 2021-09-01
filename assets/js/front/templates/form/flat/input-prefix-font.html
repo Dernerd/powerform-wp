@@ -1,0 +1,28 @@
+<?php if ( powerform_array_value_exists( $properties, 'form-font-family' ) ) { ?> .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-prefix, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-prefix {
+<?php if ( powerform_array_value_exists( $properties, 'cform-input-prefix-font-size' ) ) { ?> font-size:
+<?php echo $properties['cform-input-prefix-font-size'] ?>px;
+<?php } else { ?> font-size: 16px;
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'cform-input-prefix-font-family' ) ) { ?>
+<?php if ( $properties['cform-input-prefix-font-family'] != 'custom' ) { ?> font-family:
+<?php echo $properties['cform-input-prefix-font-family'] ?>;
+<?php } else { ?>
+<?php if ( ! empty( $properties['cform-input-prefix-custom-family'] ) ) { ?> font-family:
+<?php echo $properties['cform-input-prefix-custom-family'] ?>;
+<?php } ?>
+<?php } ?>
+<?php } ?>
+<?php if ( powerform_array_value_exists( $properties, 'cform-input-prefix-font-weight' ) ) { ?>
+<?php powerform_echo_font_weight( $properties, 'cform-input-prefix-font-weight' ); ?>
+<?php } else { ?> font-weight: 500;
+<?php } ?> }
+
+<?php } else { ?> .powerform-ui.powerform-custom-form-
+
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-prefix, .et-db #et-boc .et_pb_module .powerform-ui.powerform-custom-form-
+<?php echo $properties['form_id'] ?>.powerform-design--flat .powerform-prefix { font-size: 16px; font-family: inherit; font-weight: 500; }
+
+<?php } ?>
