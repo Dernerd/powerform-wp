@@ -543,7 +543,7 @@ class Powerform_Admin {
 						__( 'Details anzeigen' )
 					);
 				}
-				$row_meta['support'] = '<a href="' . esc_url( powerform_get_link( 'support' ) ) . '" aria-label="' . esc_attr__( 'Premium Support', Powerform::DOMAIN ) . '" target="_blank">' . esc_html__( 'Premium Support', Powerform::DOMAIN ) . '</a>';
+				//$row_meta['support'] = '<a href="' . esc_url( powerform_get_link( 'support' ) ) . '" aria-label="' . esc_attr__( 'Premium Support', Powerform::DOMAIN ) . '" target="_blank">' . esc_html__( 'Premium Support', Powerform::DOMAIN ) . '</a>';
 			}
 			//$row_meta['roadmap'] = '<a href="' . esc_url( powerform_get_link( 'roadmap' ) ) . '" aria-label="' . esc_attr__( 'Roadmap', Powerform::DOMAIN ) . '" target="_blank">' . esc_html__( 'Roadmap', Powerform::DOMAIN ) . '</a>';
 
