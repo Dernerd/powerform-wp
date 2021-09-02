@@ -265,9 +265,9 @@ $most_entry = array_reduce( $quiz_module, function ( $a, $b ) {
 								<?php if ( Powerform::is_import_export_feature_enabled() ) : ?>
 									<?php if ( $module['has_leads'] ): ?>
 										<li aria-hidden="true"><a href="#" class="fui-button-with-tag sui-tooltip sui-tooltip-left"
-											data-tooltip="<?php esc_html_e( 'Export isn\'t supported at the moment for the quizzes with lead capturing enabled.', Powerform::DOMAIN ); ?>">
+											data-tooltip="<?php esc_html_e( 'Der Export wird derzeit für die Testfragen mit aktivierter Lead-Erfassung nicht unterstützt.', Powerform::DOMAIN ); ?>">
 											<span class="sui-icon-cloud-migration" aria-hidden="true"></span>
-											<span class="fui-button-label"><?php esc_html_e( 'Export', Powerform::DOMAIN ); ?></span>
+											<span class="fui-button-label"><?php esc_html_e( 'Exportieren', Powerform::DOMAIN ); ?></span>
 											<span class="sui-tag sui-tag-blue sui-tag-sm"><?php echo esc_html__( 'Demnächst', Powerform::DOMAIN ); ?></span>
 										</a></li>
 									<?php else: ?>
@@ -277,7 +277,7 @@ $most_entry = array_reduce( $quiz_module, function ( $a, $b ) {
 											data-modal-title=""
 											data-form-id="<?php echo esc_attr( $module['id'] ); ?>"
 											data-nonce="<?php echo esc_attr( wp_create_nonce( 'powerform_popup_export_quiz' ) ); ?>">
-											<i class="sui-icon-cloud-migration" aria-hidden="true"></i> <?php esc_html_e( 'Export', Powerform::DOMAIN ); ?>
+											<i class="sui-icon-cloud-migration" aria-hidden="true"></i> <?php esc_html_e( 'Exportieren', Powerform::DOMAIN ); ?>
 										</a></li>
 									<?php endif; ?>
 
@@ -287,12 +287,12 @@ $most_entry = array_reduce( $quiz_module, function ( $a, $b ) {
 									<button
 										class="sui-option-red psource-open-modal"
 										data-modal="delete-module"
-										data-modal-title="<?php esc_attr_e( 'Delete Quiz', Powerform::DOMAIN ); ?>"
-										data-modal-content="<?php esc_attr_e( 'Are you sure you wish to permanently delete this quiz?', Powerform::DOMAIN ); ?>"
+										data-modal-title="<?php esc_attr_e( 'Test löschen', Powerform::DOMAIN ); ?>"
+										data-modal-content="<?php esc_attr_e( 'Möchtest Du diesen Test wirklich endgültig löschen?', Powerform::DOMAIN ); ?>"
 										data-form-id="<?php echo esc_attr( $module['id'] ); ?>"
 										data-nonce="<?php echo esc_attr( wp_create_nonce( 'powerformQuizFormRequest' ) ); ?>"
 									>
-										<i class="sui-icon-trash" aria-hidden="true"></i> <?php esc_html_e( 'Delete', Powerform::DOMAIN ); ?>
+										<i class="sui-icon-trash" aria-hidden="true"></i> <?php esc_html_e( 'Löschen', Powerform::DOMAIN ); ?>
 									</button>
 								</li>
 
@@ -300,7 +300,7 @@ $most_entry = array_reduce( $quiz_module, function ( $a, $b ) {
 
 						</div>
 
-						<button class="sui-button-icon sui-accordion-open-indicator" aria-label="<?php esc_html_e( 'Open item', Powerform::DOMAIN ); ?>"><i class="sui-icon-chevron-down" aria-hidden="true"></i></button>
+						<button class="sui-button-icon sui-accordion-open-indicator" aria-label="<?php esc_html_e( 'Offenes Element', Powerform::DOMAIN ); ?>"><i class="sui-icon-chevron-down" aria-hidden="true"></i></button>
 
 					</div>
 
@@ -311,21 +311,21 @@ $most_entry = array_reduce( $quiz_module, function ( $a, $b ) {
 					<ul class="sui-accordion-item-data">
 
 						<li data-col="large">
-							<strong><?php esc_html_e( 'Last Submission', Powerform::DOMAIN ); ?></strong>
+							<strong><?php esc_html_e( 'Letzte Einreichung', Powerform::DOMAIN ); ?></strong>
 							<span><?php echo esc_html( $module['last_entry_time'] ); ?></span>
 						</li>
 
 						<li data-col="small">
-							<strong><?php esc_html_e( 'Views', Powerform::DOMAIN ); ?></strong>
+							<strong><?php esc_html_e( 'Ansichten', Powerform::DOMAIN ); ?></strong>
 							<span><?php echo esc_html( $module['views'] ); ?></span>
 						</li>
 
 						<li>
 							<?php if ( $module['has_leads'] ) : ?>
-                                <strong class="powerform-leads-leads" style="display:none;"><?php esc_html_e( 'Leads Collected', Powerform::DOMAIN ); ?></strong>
+                                <strong class="powerform-leads-leads" style="display:none;"><?php esc_html_e( 'Gesammelte Leads', Powerform::DOMAIN ); ?></strong>
 								<a href="<?php echo admin_url( 'admin.php?page=powerform-quiz-view&form_id=' . $module['id'] ); // phpcs:ignore ?>" class="powerform-leads-leads" style="display:none;"><?php echo esc_html( $module['leads'] ); ?></a>
 							<?php endif; ?>
-                            <strong class="powerform-leads-submissions"><?php esc_html_e( 'Submissions', Powerform::DOMAIN ); ?></strong>
+                            <strong class="powerform-leads-submissions"><?php esc_html_e( 'Einreichungen', Powerform::DOMAIN ); ?></strong>
                             <a href="<?php echo admin_url( 'admin.php?page=powerform-quiz-view&form_id=' . $module['id'] ); // phpcs:ignore ?>" class="powerform-leads-submissions"><?php echo esc_html( $module['entries'] ); ?></a>
 						</li>
 
@@ -339,10 +339,10 @@ $most_entry = array_reduce( $quiz_module, function ( $a, $b ) {
 
 						<?php if ( $module['has_leads'] ): ?>
 							<li class="fui-conversion-select" data-col="selector">
-								<label class="fui-selector-label"><?php esc_html_e( 'View data for', Powerform::DOMAIN ); ?></label>
+								<label class="fui-selector-label"><?php esc_html_e( 'Daten anzeigen für', Powerform::DOMAIN ); ?></label>
 								<select class="sui-select-sm fui-selector-button fui-select-listing-data">
-									<option value="submissions"><?php esc_html_e( 'Submissions', Powerform::DOMAIN ); ?></option>
-									<option value="leads"><?php esc_html_e( 'Leads Form', Powerform::DOMAIN ); ?></option>
+									<option value="submissions"><?php esc_html_e( 'Einreichungen', Powerform::DOMAIN ); ?></option>
+									<option value="leads"><?php esc_html_e( 'Leads-Formular', Powerform::DOMAIN ); ?></option>
 								</select>
 							</li>
 						<?php endif; ?>
@@ -352,13 +352,13 @@ $most_entry = array_reduce( $quiz_module, function ( $a, $b ) {
 					<div class="sui-chartjs sui-chartjs-animated<?php echo esc_attr( $opened_chart ); ?> powerform-stats-chart" data-chart-id="<?php echo esc_attr( $module['id'] ); ?>">
 
 						<div class="sui-chartjs-message sui-chartjs-message--loading">
-							<p><i class="sui-icon-loader sui-loading" aria-hidden="true"></i> <?php esc_html_e( 'Loading data...', Powerform::DOMAIN ); ?></p>
+							<p><i class="sui-icon-loader sui-loading" aria-hidden="true"></i> <?php esc_html_e( 'Lade Daten...', Powerform::DOMAIN ); ?></p>
 						</div>
 
 						<?php if ( 0 === $module['entries'] ) { ?>
 
 							<div class="sui-chartjs-message sui-chartjs-message--empty">
-								<p><i class="sui-icon-info" aria-hidden="true"></i> <?php esc_html_e( "Your quiz doesn't have any submission yet. Try again in a moment.", Powerform::DOMAIN ); ?></p>
+								<p><i class="sui-icon-info" aria-hidden="true"></i> <?php esc_html_e( "Dein Test hat noch keine Einreichung. Versuche es gleich noch einmal.", Powerform::DOMAIN ); ?></p>
 							</div>
 
 						<?php } else { ?>
@@ -366,7 +366,7 @@ $most_entry = array_reduce( $quiz_module, function ( $a, $b ) {
 							<?php if ( 0 === $module_entries_from_last_month ) { ?>
 
 								<div class="sui-chartjs-message sui-chartjs-message--empty">
-									<p><i class="sui-icon-info" aria-hidden="true"></i> <?php esc_html_e( "Your quiz didn't collect submissions in the past 30 days.", Powerform::DOMAIN ); ?></p>
+									<p><i class="sui-icon-info" aria-hidden="true"></i> <?php esc_html_e( "Dein Test hat in den letzten 30 Tagen keine Einsendungen gesammelt.", Powerform::DOMAIN ); ?></p>
 								</div>
 
 							<?php } ?>
@@ -388,13 +388,13 @@ $most_entry = array_reduce( $quiz_module, function ( $a, $b ) {
 					<div class="sui-chartjs sui-chartjs-animated<?php echo esc_attr( $opened_chart ); ?> powerform-leads-chart" style="display: none;" data-chart-id="<?php echo esc_attr( $module['leads_id'] ); ?>">
 
 						<div class="sui-chartjs-message sui-chartjs-message--loading">
-							<p><i class="sui-icon-loader sui-loading" aria-hidden="true"></i> <?php esc_html_e( 'Loading data...', Powerform::DOMAIN ); ?></p>
+							<p><i class="sui-icon-loader sui-loading" aria-hidden="true"></i> <?php esc_html_e( 'Lade Daten...', Powerform::DOMAIN ); ?></p>
 						</div>
 
 						<?php if ( 0 === $module['entries'] ) { ?>
 
 							<div class="sui-chartjs-message sui-chartjs-message--empty">
-								<p><i class="sui-icon-info" aria-hidden="true"></i> <?php esc_html_e( "Your quiz doesn't have any submission yet. Try again in a moment.", Powerform::DOMAIN ); ?></p>
+								<p><i class="sui-icon-info" aria-hidden="true"></i> <?php esc_html_e( "Dein Test hat noch keine Einreichung. Versuche es später noch einmal.", Powerform::DOMAIN ); ?></p>
 							</div>
 
 						<?php } else { ?>
@@ -402,7 +402,7 @@ $most_entry = array_reduce( $quiz_module, function ( $a, $b ) {
 							<?php if ( 0 === $module_entries_from_last_month ) { ?>
 
 								<div class="sui-chartjs-message sui-chartjs-message--empty">
-									<p><i class="sui-icon-info" aria-hidden="true"></i> <?php esc_html_e( "Your quiz didn't collect submissions in the past 30 days.", Powerform::DOMAIN ); ?></p>
+									<p><i class="sui-icon-info" aria-hidden="true"></i> <?php esc_html_e( "Dein Test hat in den letzten 30 Tagen keine Einsendungen gesammelt.", Powerform::DOMAIN ); ?></p>
 								</div>
 
 							<?php } ?>
@@ -436,32 +436,32 @@ $most_entry = array_reduce( $quiz_module, function ( $a, $b ) {
 		<?php if ( powerform_is_show_branding() ) : ?>
 			<img src="<?php echo esc_url( $image_empty ); ?>"
 				srcset="<?php echo esc_url( $image_empty2x ); ?> 1x, <?php echo esc_url( $image_empty2x ); ?> 2x"
-				alt="<?php esc_html_e( 'Empty quizzes', Powerform::DOMAIN ); ?>"
+				alt="<?php esc_html_e( 'Leere Tests', Powerform::DOMAIN ); ?>"
 				class="sui-image"
 				aria-hidden="true"/>
 		<?php endif; ?>
 
 		<div class="sui-message-content">
 
-			<p><?php esc_html_e( 'Create fun or challenging quizzes for your visitors to take and share on social media.', Powerform::DOMAIN ); ?></p>
+			<p><?php esc_html_e( 'Erstelle unterhaltsame oder herausfordernde Testfragen, die Deine Besucher annehmen und in den sozialen Medien teilen können.', Powerform::DOMAIN ); ?></p>
 
 			<?php if ( Powerform::is_import_export_feature_enabled() ) : ?>
 
 				<p>
-					<button class="sui-button sui-button-blue psource-button-open-modal" data-modal="quizzes"><i class="sui-icon-plus" aria-hidden="true"></i> <?php esc_html_e( 'Create', Powerform::DOMAIN ); ?></button>
+					<button class="sui-button sui-button-blue psource-button-open-modal" data-modal="quizzes"><i class="sui-icon-plus" aria-hidden="true"></i> <?php esc_html_e( 'Erstellen', Powerform::DOMAIN ); ?></button>
 
 					<a href="#"
 						class="sui-button psource-open-modal"
 						data-modal="import_quiz"
 						data-modal-title=""
 						data-nonce="<?php echo esc_attr( wp_create_nonce( 'powerform_popup_import_quiz' ) ); ?>">
-						<i class="sui-icon-upload-cloud" aria-hidden="true"></i> <?php esc_html_e( 'Import', Powerform::DOMAIN ); ?>
+						<i class="sui-icon-upload-cloud" aria-hidden="true"></i> <?php esc_html_e( 'Importieren', Powerform::DOMAIN ); ?>
 					</a>
 				</p>
 
 			<?php else : ?>
 
-				<p><button class="sui-button sui-button-blue psource-button-open-modal" data-modal="quizzes"><i class="sui-icon-plus" aria-hidden="true"></i> <?php esc_html_e( 'Create', Powerform::DOMAIN ); ?></button></p>
+				<p><button class="sui-button sui-button-blue psource-button-open-modal" data-modal="quizzes"><i class="sui-icon-plus" aria-hidden="true"></i> <?php esc_html_e( 'Erstellen', Powerform::DOMAIN ); ?></button></p>
 
 			<?php endif; ?>
 
@@ -567,7 +567,7 @@ foreach ( $quiz_module as $module ) {
 			},
 			callbacks: {
 				title: function( tooltipItem, data ) {
-					return tooltipItem[0].yLabel + " Submissions";
+					return tooltipItem[0].yLabel + " Einreichungen";
 				},
 				label: function( tooltipItem, data ) {
 					return tooltipItem.xLabel;
@@ -684,7 +684,7 @@ if ( isset( $module['has_leads'] ) && $module['has_leads'] ) {
 				},
 				callbacks: {
 					title: function( tooltipItem, data ) {
-						return tooltipItem[0].yLabel + " Submissions";
+						return tooltipItem[0].yLabel + " Einreichungen";
 					},
 					label: function( tooltipItem, data ) {
 						return tooltipItem.xLabel;

@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Powerform
- * Version: 1.2.1
+ * Version: 1.2.2
  * Plugin URI:  https://n3rds.work/piestingtal_source/powerform-plugin/
  * Description: Erfasse Benutzerinformationen (so detailliert wie Sie möchten), beteilige Benutzer an interaktiven Umfragen, die Echtzeitergebnisse und Grafiken, Quizfragen im Facebook-Stil und Wissenstests ohne falsche Antwort anzeigen.
  * Author: WMS N@W
@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'POWERFORM_VERSION' ) ) {
-	define( 'POWERFORM_VERSION', '1.2.1' );
+	define( 'POWERFORM_VERSION', '1.2.2' );
 }
 
 if ( ! defined( 'POWERFORM_SUI_VERSION' ) ) {

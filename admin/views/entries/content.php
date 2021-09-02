@@ -44,10 +44,10 @@ $count = Powerform_Form_Entry_Model::count_all_entries();
 
 			</div>
 
-			<button class="sui-button sui-button-blue show-submissions" onclick="submit()"><?php esc_html_e( 'Show Submissions', Powerform::DOMAIN ); ?></button>
+			<button class="sui-button sui-button-blue show-submissions" onclick="submit()"><?php esc_html_e( 'Einsendungen anzeigen', Powerform::DOMAIN ); ?></button>
 
 			<?php if ( $markup ) : ?>
-				<a href="/" class="sui-button sui-button-ghost psource-open-modal" data-modal="exports-schedule"><i class="sui-icon-paperclip" aria-hidden="true"></i> <?php esc_html_e( 'Export', Powerform::DOMAIN ); ?></a>
+				<a href="/" class="sui-button sui-button-ghost psource-open-modal" data-modal="exports-schedule"><i class="sui-icon-paperclip" aria-hidden="true"></i> <?php esc_html_e( 'Exportieren', Powerform::DOMAIN ); ?></a>
 			<?php endif; ?>
 
 		</div>
@@ -71,9 +71,9 @@ $count = Powerform_Form_Entry_Model::count_all_entries();
 
 			<div class="sui-message-content">
 
-				<h2><?php esc_html_e( 'Almost there!', Powerform::DOMAIN ); ?></h2>
+				<h2><?php esc_html_e( 'Fast dort!', Powerform::DOMAIN ); ?></h2>
 
-				<p><?php esc_html_e( 'Select the form, poll or quiz module to view the corresponding submissions.', Powerform::DOMAIN ); ?></p>
+				<p><?php esc_html_e( 'Wähle das Formular-, Umfrage- oder Testmodul aus, um die entsprechenden Einreichungen anzuzeigen.', Powerform::DOMAIN ); ?></p>
 
 			</div>
 
@@ -94,9 +94,9 @@ $count = Powerform_Form_Entry_Model::count_all_entries();
 
 		<div class="sui-message-content">
 
-			<h2><?php esc_html_e( 'Submissions', Powerform::DOMAIN ); ?></h2>
+			<h2><?php esc_html_e( 'Einreichungen', Powerform::DOMAIN ); ?></h2>
 
-			<p><?php esc_html_e( 'You haven’t received any form, poll or quiz submissions yet. When you do, you’ll be able to view all the data here.', Powerform::DOMAIN ); ?></p>
+			<p><?php esc_html_e( 'Du hast noch keine Formular-, Umfrage- oder Test-Einsendungen erhalten. Wenn Du dies tust, kannst Du alle Daten hier einsehen.', Powerform::DOMAIN ); ?></p>
 
 		</div>
 
